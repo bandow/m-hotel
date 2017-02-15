@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+/*shopping css*/
+.shopping #header .c{width:100%;}
+.shopping-wrapper{margin:2.4rem 0 2rem;}
+
+.ad{padding:0 3%;height:2rem;background-color:#fefce7;}
+.ad i{float:left;color:#fe9900;display:block; width:7%;line-height:2rem;}
+.ad span{float:left;width:93%; height:2rem;color:#b39785;font:.75rem/2rem "Microsoft YaHei";display:block; overflow:hidden;}
+.qimo8{ overflow:hidden; width:93%;}
+.qimo8 .qimo {width:8000%; height:30px;}
+.qimo8 .qimo div{ float:left;}
+.shopping{width:100%; height:auto; overflow:hidden;}
+.shopping-text{background-color:#2d2d2d; position:relative; margin-bottom:.3rem;}
+.shopping-text h3{padding-left:.5rem;color:white; height:2rem;font:.75rem/2rem "Microsoft YaHei";}
+.shopping-text i{position:absolute; top:.5rem;right:.5rem;color:#fff;font-size:1rem;}
+.shopping dl dd .shopping-text i{animation: RotateUp .5s forwards;-webkit-animation: RotateUp .5s forwards;}
+.shopping dl .on .shopping-text .on-down{animation: RotateDown .5s forwards;-webkit-animation: RotateDown .5s forwards;}
+/*.shopping-text .on-up{animation: RotateUp .5s forwards;-webkit-animation: RotateUp .5s forwards;}*/
+@keyframes RotateDown{
+   0%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+   100%{    
+    -webkit-transform:rotate(450deg);transform:rotate(450deg);
+   }
+}
+@-webkit-keyframes RotateDown{
+   0%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+   100%{    
+    -webkit-transform:rotate(450deg);transform:rotate(450deg);
+   }
+}
+@keyframes RotateUp{
+   0%{    
+    -webkit-transform:rotate(450deg);transform:rotate(450deg);
+   }
+   100%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+}
+@-webkit-keyframes RotateUp{
+   0%{    
+    -webkit-transform:rotate(450deg);transform:rotate(450deg);
+   }
+   100%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+}
+
+.shopping-list{display:none; margin-top:-.3rem;}
+.on .shopping-list{ display: block; }
+.shopping-list ul li{padding:3%; height:auto;overflow:hidden;}
+.shopping-list ul li .l{position:relative;float:left; width:30%; height:auto;}
+.shopping-list ul li .l .add-em{ display:none; width:1.2rem; height:1.2rem; background-color:#ff5e52; position:absolute; border-radius:100%; top:-.3rem; right:-.3rem; text-align:center; color:white; font-size:.75rem; line-height:1.2rem;}
+.shopping-list ul li .r{float:right; width:65%;}
+.shopping-list ul li .r h4{font: bold .8rem/1rem "Microsoft YaHei"; margin-bottom:.5rem;}
+.shopping-list ul li .r p{font:.8rem/1.5rem "Microsoft YaHei";color:#ff5e52;}
+
+.shopping-list ul li .r p .add,.shopping-list ul li .r p .noadd{float:right;display:block; width:1.5rem; height:1.5rem; border-radius:100%; background-color:#ff5e52; margin-left:.3rem;}
+.shopping-list ul li .r p i{display:block; font-size:1rem;color:white; line-height:1.5rem; text-align:center; cursor:pointer;}
+
+.good{position:fixed; left:0; bottom:2rem; width:100%;display:none; background-color:#ff5e52; height:2.5rem;}
+.good p{padding:0 3%;font:.75rem/2.5rem "Microsoft YaHei";color:white;}
+.good p span{ margin-right:1rem;}
+.good p a{ display:inline-block; background-color:#fe9900; padding:0 1rem; height:1.5rem; line-height:1.5rem; border-radius:5px; text-decoration:none; color:white; float:right;  margin-top: .5rem;}
+
+.showpping-footer{ position:fixed; left:0; bottom:0; width:100%; height:2rem; background-color:#f8f8f8;}
+.showpping-footer ul li{float:left;width:33.3333%;font:.8rem/2rem "Microsoft YaHei";color:#ff5e52; text-align:center;}
+.showpping-footer ul li i{ font-size:1rem;}
+.showpping-footer ul li a{ text-decoration:none;color:#ff5e52;}
+.showpping-footer ul .on{ background-color:#ff5e52; color:white;}
+.showpping-footer ul .on a{color:white;}
+
+/*shopping cart css*/
+.cart{ display:none; width:100%; height:auto; overflow:hidden;}
+.cart-i{ margin:0 auto 1rem;width:4rem; height:4rem; background-color:#ccc; border-radius:100%;}
+.cart-i i{color:white; text-align:center;font-size:2rem; line-height:4rem; display:block;}
+.cart p{text-align:center;}
+.cart .p-big{font:1rem/2rem "Microsoft YaHei";color:#666;}
+.cart .p-small{font:.75rem/1rem "Microsoft YaHei";color:#999;}
+.cart a{ width:25%; margin:2rem auto 0; height:2rem; text-align:center; color:#a50000; border:1px solid #a50000; border-radius:5px; display:block; font:.75rem/2rem "Microsoft YaHei"; text-decoration:none;}
+
+.have-cart-top{padding:0 .3rem;background-color:white; height:auto; overflow:hidden;}
+.have-cart-top ul li{ height:auto; overflow:hidden; padding:.3rem; background-color:#eee; margin-bottom:.3rem;}
+.have-cart-top ul .top{ background-color:white;}
+.have-cart-top ul .top .r{font:.75rem/1.5rem "Microsoft YaHei";color:#333;}
+.have-cart-top ul li .l{float:left; width:1.5rem; height:1.5rem;border: 1px solid #dc1c49; border-radius:100%;}
+.have-cart-top ul li .l i{ display:none; text-align:center; font-size:1.5rem;color:#dc1c49;}
+.have-cart-top ul li .show{border-radius:100%; border: 1px solid #fff;}
+.have-cart-top ul li .show i{display:block;}
+.have-cart-top ul li .r{float:right; margin-left:.3rem; width:15rem;}
+.have-cart-top ul li .r .r-l{float:left; width:30%;}
+.have-cart-top ul li .r .r-r{ margin-left:3%;float:left; width:67%;}
+.have-cart-top ul li .r .r-r h4{margin-bottom:.5rem;}
+.have-cart-top ul li .r .r-r h4 strong{font:bold .8rem/1rem "Microsoft YaHei";color:#000;width: 8rem;display:inline-block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.have-cart-top ul li .r .r-r h4 a{color:#ccc ; border:1px solid #ccc; border-radius:4px;font:.65rem/1rem "Microsoft YaHei"; display:inline-block; padding:0 .2rem; text-decoration:none;}
+.have-cart-top ul li .r .r-r .p-big{font:.8rem/1rem "Microsoft YaHei";color:#ff5e52; margin-bottom:.5rem;}
+.have-cart-top ul li .r .r-r .p-small{font:.75rem/1rem "Microsoft YaHei";color:#ccc;}
+
+.have-cart-top ul li .r .r-r .p-small .cart-add,.have-cart-top ul li .r .r-r .p-small .cart-noadd{float:right;display:block; width:1.5rem; height:1.5rem; border-radius:100%; background-color:#ff5e52; margin-left:.3rem;}
+.have-cart-top ul li .r .r-r p i{display:block; font-size:1rem;color:white; line-height:1.5rem; text-align:center; cursor:pointer;}
+
+.have-cart-one{ position:relative; background-color:#ff5e52; height:2rem;}
+.have-cart-one p{font:.75rem/2rem "Microsoft YaHei";color:white; padding-left:.5rem;}
+.have-cart-one a{ text-decoration:none;}
+.have-cart-one i{position:absolute;top:0;right:.5rem;color:white;display:block;line-height:2rem;}
+
+.have-cart-two{ background-color:white;border-bottom:1px solid #ccc;height:2rem;}
+.have-cart-two p{text-align:center;font:.75rem/2rem "Microsoft YaHei";color:#333;}
+
+.have-cart-three{margin-top:.5rem;background-color:white;border-bottom:1px solid #ccc;border-top:1px solid #ccc; width:100%; height:auto; overflow:hidden;}
+.have-cart-three .l{float:left; width:30%;font:.75rem/4rem "Microsoft YaHei"; padding-left:1rem;}
+.have-cart-three .r{float:right; width:70%;}
+.have-cart-three .r ul li{ position:relative; height:2rem;color:#333; border-bottom:1px solid #eee;}
+.have-cart-three .r ul li span{font:.75rem/2rem "Microsoft YaHei";}
+.have-cart-three .r ul .nobottom{border-bottom:none;}
+.have-cart-three .r ul li .i-t{font-size:1.2rem;color:#36a201; margin:0 .3rem 0 3rem;}
+.have-cart-three .r ul li .i-b{font-size:1.3rem;color:#f4c600; margin:0 .3rem 0 3rem;}
+.have-cart-three .r ul li .select{font-size:1.2rem;color:#a9b7b7; position:absolute; right:0; bottom:-1px;}
+.have-cart-three .r ul .on .select{color:#ff5e52;}
+
+.have-cart-four{ margin:.5rem; background-color:white; border-radius:4px; padding:.5rem;}
+.have-cart-four{font:.75rem/1.2rem "Microsoft YaHei";color:#a1a1a1;}
+
+.have-cart-footer{position:fixed; left:0; bottom:0; width:100%; height:2rem; background-color:white;}
+.have-cart-footer p{font:.75rem/2rem "Microsoft YaHei"; padding-left:1rem;}
+.have-cart-footer p span{color:red;}
+.have-cart-footer p a{float:right; width:40%; background-color:#ff9a14; text-decoration:none; color:white; text-align:center;}
+
+/*order qry css*/
+.qry{ display:none;width:100%; height:auto; overflow:hidden;}
+.qry-i i{text-align:center;font-size:6rem;display:block;color:#ccc;}
+.qry p{margin:0 auto; width:60%;font:1rem/1.5rem "Microsoft YaHei"; color:#ccc;}
+.qry a{ width:25%; margin:2rem auto 0; height:2rem; text-align:center; color:#a50000; border:1px solid #a50000; border-radius:5px; display:block; font:.75rem/2rem "Microsoft YaHei"; text-decoration:none;}
+
+.shop-qry{ width:100%; height:auto; overflow:hidden; border-bottom:1px solid #eee; padding-bottom:.5rem;}
+.shop-qry-top{padding:0 3%; height:2rem;}
+.shop-qry-top h3{float:left;font:.75rem/2rem "Microsoft YaHei";color:#f56504;}
+.shop-qry-top i{float:left;color:#999; line-height:2rem; margin-left:.5rem;}
+.shop-qry-top span{float:right;font:.75rem/2rem "Microsoft YaHei";color:#000;}
+.shop-qry ul li{margin-bottom:.2rem; height:auto; overflow:hidden;}
+.shop-qry-li{padding:3%; height:auto; overflow:hidden; background-color:#eee; }
+.shop-qry-li-l{float:left; width:30%;}
+.shop-qry-li-r{float:right; margin-left:3%; width:67%;}
+.shop-qry-li-r h4 {font: bold .8rem/1rem "Microsoft YaHei";margin-bottom: .5rem;}
+.shop-qry-li-r .p-big {font: .8rem/1rem "Microsoft YaHei";color: #ff5e52;margin-bottom: .5rem;}
+.shop-qry-li-r .p-small {font: .75rem/1rem "Microsoft YaHei";color: #ccc;}
+.shop-qry .shop-qry-p{padding:0 3%;  text-align:right;font:.8rem/1rem "Microsoft YaHei";margin:1rem 0 .5rem 0;color:#333;}
+.shop-qry .shop-qry-p span{ margin-right:.5rem;}
+.shop-qry .shop-qry-p a{ padding:0 .5rem; margin-left:.5rem; border:1px solid #ccc; display:block; float:right; border-radius:5px; height:1.5rem;font: .75rem/1.5rem "Microsoft YaHei";color:#999; text-decoration:none;}
+.shop-qry .shop-qry-p .a-see{ background-color:#fe9900;color:white; border:1px solid #fe9900;}
+
+/*pop css*/
+.shrouded{display:none; position:fixed;top:0;left:0;z-index:10; background:rgba(0,0,0,.8); width:100%; height:100%;}
+.delete-pop{display:none;position:fixed;left:10%;z-index:11;width:80%; background-color:white;border-radius:5px;}
+.delete-pop h3{ height:1.3rem; background-color:#a50000;border-radius:4px 4px 0 0;}
+.delete-pop .p-t{padding:1rem;font: .75rem/1.2rem "Microsoft YaHei";color:#999;}
+.delete-pop .p-b{width:100%; height:auto; overflow:hidden; border-top:1px solid #ccc;}
+.delete-pop .p-b a{float:left;width:50%; text-align:center; text-decoration:none; color:#ccc; height:2rem;font: .75rem/2rem "Microsoft YaHei";color:#999;}
+.delete-pop .p-b .l{color:#ccc;}
+.delete-pop .p-b .r{border-left:1px solid #ccc;}

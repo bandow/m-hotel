@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>验证手机号</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="css/newLoginRegister.css">
+    <style>
+        .form-item .input-pwdToggle { background: url('images/password-close.png') no-repeat 0 0;-webkit-background-size: 18px 16px; width: 20px;}
+        .form-item .input-pwdToggle-show{ background: url('images/password-open.png') no-repeat 0 0; -webkit-background-size: 18px 16px; width: 20px;}
+        .input-clearValue{background: url('images/close.png') no-repeat center center;width:19px; background-size: 15px 15px; cursor: pointer; display:none;}
+        .form-item .input-renovate{ background: url('images/renovate.png') no-repeat 0 0; background-size:20px 16px; width: 20px; }
+    </style>
+</head>
+
+<body>
+<div class="viewport viewport-login">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">验证邮箱</a>
+    </header>
+    <!--header end-->
+    <!--wrapper-login start-->
+    <div class="wrapper-login">
+        <form class="form-wrapper">
+           <div class="vcode-page">
+               <p class="checkTip" style="text-align:left">我们已经发了封密码操作邮件到您的邮箱</p>
+               <p class="checkPhone c-666" style="text-align:left">810547811@qq.com</p>
+               <p class="verify-text c-999">请注意查收<a class="td-no" href="">点击登录邮箱</a></p>
+           </div>
+        </form>
+    </div>
+    <!--wrapper-login end-->
+</div>
+
+
+
+<!--load start-->
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(e){
+        var size = $(window).width() / 18;
+        $("html").css('font-size', size);
+        if ($(window).width() >= 640) {
+            $("html").css('font-size', '24px');
+        }
+        //输入手机号码
+        $("#smsLogin-password").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        $("#login-code").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+
+        //第三方登录-验证手机号 start
+        $("#login-username").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        $("#login-password").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        $("#login-pwdToggle").on("click",function(){
+            if($(this).hasClass("input-pwdToggle-show")){
+                $(this).removeClass("input-pwdToggle-show");
+                $("#login-password").attr("type","password");
+            }else{
+                $(this).addClass("input-pwdToggle-show");
+                $("#login-password").attr("type","text");
+            }
+        });
+
+    });
+
+    function closeIcon1(){
+        $("#smsLogin-password").val("").next().hide();
+    }
+    function closeIcon2(){
+        $("#login-code").val("").next().hide();
+    }
+
+    //第三方登录-验证手机号 start
+    function closeIcon3(){
+        $("#login-username").val("").next().hide();
+    }
+    function closeIcon4(){
+        $("#login-password").val("").next().hide();
+    }
+
+
+</script>
+<!--load end-->
+</body>
+</html>

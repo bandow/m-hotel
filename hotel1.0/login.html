@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/login-register.css">
+</head>
+
+<body>
+<div class="viewport viewport-login">
+<!--header start-->
+ <header id="header">
+   <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+   <!--<a class="c">绑定会员</a>-->   <!--状态1 状态1时状态2隐藏-->
+   <a class="c">更改绑定</a>          <!--状态2 状态2时状态1隐藏-->
+   <a href="register.html" class="r fs0-65">注册</a>
+ </header>
+<!--header end-->
+<!--wrapper-hotel start-->
+ <div class="wrapper-login">
+    <!--swiper-container start-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+        </div>
+    </div>
+    <!--swiper-container end-->
+    <div class="login h-auto">
+      <div class="username bg-fff h-auto">
+       <span class="l fs0-75 c-666 w025 lh1"><i class="iconfont">&#xe66c;</i>用户</span><input style="padding-left:0;" class="r" type="text" placeholder="会员号/手机号/电子邮箱"/>
+      </div>
+      <div class="password bg-fff h-auto">
+       <span class="l fs0-75 c-666 w025 lh1"><i class="iconfont">&#xe66b;</i>密码</span><input onclick="dcb();" class="r" type="text" placeholder="帐号密码"/>
+      </div>
+      <!--状态2 start-->
+      <div class="change bg-fff mt0-5">    
+        <p class="fs0-75 c-red lh1-2">当前绑定会员：bangdow</p>
+        <p class="fs0-75 c-666 lh1-2">卡号：2145555425555</p>
+        <p class="fs0-75 c-666 lh1-2">登录新的账号将绑定新的会员卡</p>
+      </div>             
+      <!--状态2 end-->
+      <div class="btns"><a class="mt1 h2 lh2 tc br-5px w100 td-no bg-a50000 c-fff fs0-75" href="loginSuccess.html">绑定</a></div>
+      <div class="login-text mt2">
+        <p class="fs0-75 c-666 lh1-2 mb0-3">★ 太久没登录忘记密码？<a href="forgetPassword.html">找回密码</a></p>
+        <p class="fs0-75 c-666 lh1-2">★ 温馨提示：如果您已经是持卡会员但没有登录密码，首次登录密码为注册是填写的证件号码的后四位，官网、微信和支付宝注册会员请使用注册密码，如您的密码不正确，请通过“忘记密码”功能重置密码。如有任何疑问请致电：4007007899</p>
+      </div>
+    </div>
+    
+    
+ </div>
+<!--wrapper-date end-->
+</div>
+
+<!--prompt-pop start-->
+ <div class="prompt br-3px bg-666"><p class="base-p fs0-7 c-fff">请输入用户请输入用户名请输入用户名请输入用户名名</p></div>
+<!--prompt-pop end-->
+
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/login-register.js"></script>
+<script>
+ var mySwiper = new Swiper('.swiper-container',{
+  loop : true,       //循环
+  autoplay: 3000,    //可选选项，自动滑动
+})
+</script>
+<script>
+function dcb(){
+$("input").keypress(function(){
+    $(".prompt").addClass("prompt-on");
+	 setTimeout(time,1500);	  	
+  });
+}
+</script>
+<!--load end-->
+</body>
+</html>

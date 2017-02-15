@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>登录东呈账号</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="css/newLoginRegister.css">
+    <style>
+        .logo-dom{  background: url('images/log.svg') no-repeat 50% 50%; background-size: 140px 86px; }
+        .input-clearValue{background: url('images/close.png') no-repeat center center;width:19px; background-size: 15px 15px; cursor: pointer; display:none;}
+        .form-item .input-pwdToggle { background: url('images/password-close.png') no-repeat 0 0;-webkit-background-size: 18px 16px; width: 20px;}
+        .form-item .input-pwdToggle-show{ background: url('images/password-open.png') no-repeat 0 0; -webkit-background-size: 18px 16px; width: 20px;}
+        .account-third .Wechat{background: url('images/icon.png') no-repeat 0 0; background-size:199px auto; width:40px; height:40px; display:inline-block;}
+        .account-third .Alipay{background: url('images/icon.png') no-repeat -53px 0; background-size:199px auto; width:40px; height:40px; display:inline-block;}
+        .account-third .qq{background: url('images/icon.png') no-repeat -106px 0; background-size:199px auto; width:40px; height:40px; display:inline-block;}
+        .account-third .sina{background: url('images/icon.png') no-repeat -159px 0; background-size:199px auto; width:40px; height:40px; display:inline-block;}
+    </style>
+</head>
+
+<body>
+<div class="viewport viewport-login">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">登录东呈账号</a>
+        <a href="fastRegister.html" class="r fs0-65">注册</a>
+    </header>
+    <!--header end-->
+    <!--wrapper-login start-->
+    <div class="wrapper-login">
+        <form class="form-wrapper">
+            <div class="img-div">
+                <div class="logo-dom"></div>
+            </div>
+            <div class="img-div-add">
+                <div class="user-img"><img src="images/icon.jpg" alt=""></div>
+            </div>
+            <p class="form-item form-item-username form-input-mobile">
+                <input type="text" name="username" class="text-input" maxlength="60" placeholder="手机号/邮箱/用户名" value="" id="login-username">
+                <span class="input-clearValue" onclick="closeIcon1();"></span>
+            </p>
+            <p class="form-item form-item-password form-input-mobile">
+                <input type="password" name="password" class="text-input" id="login-password" placeholder="密码" value="">
+                <span class="input-clearValue" onclick="closeIcon2();"></span>
+                <span id="login-pwdToggle" class="input-aide input-pwdToggle"></span>
+            </p>
+            <p class="account-login">
+                <a href="phoneLogin.html" class="l c-999 td-no">短信验证登录</a>
+                <a href="userRetrieve.html" class="r c-999 td-no">忘记密码?</a>
+            </p>
+            <p class="form-item form-item-btn">
+                <input type="submit" value="登录" id="login-submit" class="pass-button-full pass-button-full-disabled" disabled="disabled">
+            </p>
+            <p class="account-reg c-999">第三方帐号登录</p>
+            <p class="account-third">
+                <a href="" class="Wechat"></a>
+                <a href="" class="Alipay"></a>
+                <a href="" class="qq"></a>
+                <a href="" class="sina"></a>
+            </p>
+        </form>
+    </div>
+    <!--wrapper-login end-->
+</div>
+
+
+
+<!--load start-->
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(e){
+        var size = $(window).width() / 18;
+        $("html").css('font-size', size);
+        if ($(window).width() >= 640) {
+            $("html").css('font-size', '24px');
+        }
+        //输入帐号密码
+        $("#login-username").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+            console.log($(this).val());
+            if($(this).val()==="13719236677"){
+                topShow();
+            }else{
+                topHide();
+            };
+        });
+        $("#login-password").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        //切换密码显示隐藏
+        $("#login-pwdToggle").on("click",function(){
+            if($(this).hasClass("input-pwdToggle-show")){
+                $(this).removeClass("input-pwdToggle-show");
+                $("#login-password").attr("type","password");
+            }else{
+                $(this).addClass("input-pwdToggle-show");
+                $("#login-password").attr("type","text");
+            }
+        });
+    });
+
+    function closeIcon1(){
+        $("#login-username").val("").next().hide();
+        topHide();
+    }
+    function closeIcon2(){
+        $("#login-password").val("").next().hide();
+    }
+    function topShow(){
+        $(".img-div").hide();
+        $(".img-div-add").show();
+    }
+    function topHide(){
+        $(".img-div").show();
+        $(".img-div-add").hide();
+    }
+
+
+</script>
+<!--load end-->
+</body>
+</html>

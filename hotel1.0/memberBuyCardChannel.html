@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/member.css">
+</head>
+
+<body>
+<div class="viewport viewport-member">
+<!--header start-->
+ <header id="header">
+   <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+   <a class="c">购卡注册</a>
+ </header>
+<!--header end-->
+<!--wrapper-hotel start-->
+ <div class="wrapper-member"> 
+      <a href="#"><img src="images/buy-top.png"/></a>
+      <div class="buy-card-channel">
+        <h3 class="fs0-75 c-333 lh1-5 fw-big">向您推荐：</h3>
+        <ul>
+            <li class="new_m mun h-auto">
+                <span class="fs0-2 fw-big lh2-4">黑金卡会员</span><i>√</i>
+                <div class="buy-card-channel-text">
+                    <dl>
+                        <dd><input class="input_one" placeholder="姓名" id="BlackName"></dd>
+                        <dd><input class="input_three" placeholder="手机号" id="BlackTel"></dd>
+                        <dd class="dd_i_s">
+                            <input class="input_two" placeholder="证件号码" id="BlackPapersNo" autocomplete="off">
+                            <select class="select" name="PapersType" id="BlackPapersType">
+                                <option value="3">身份证</option>
+                                <option value="13">港澳居民证</option>
+                                <option value="10">台胞证</option>
+                                <option value="4">护照</option>
+                                <option value="12">其他</option>
+                            </select>
+                        </dd>
+                        <dd class="mt0-3 fs0-8 c-666 lh1-2 h-auto"><em class="w035 l">用户密码：</em><em class="w065 r">手机后六位数</em></dd>
+                        <dd class="fs0-8 c-666 lh1-2 h-auto"><em class="w035 l">购买金额：</em><em class="w065 c-ff9a14 r">498元</em></dd>
+                    </dl>
+                </div>
+            </li>
+            <li><span>金卡会员</span><i>√</i>
+
+                <div class="buy-card-channel-text">
+                    <dl>
+                        <dd><input class="input_one" placeholder="姓名" id="GoldName"></dd>
+                        <dd><input class="input_three" placeholder="手机号" id="GoldTel"></dd>
+                        <dd class="dd_i_s">
+                            <input class="input_two" placeholder="证件号码" id="GoldPapersNo" autocomplete="off">
+                            <select class="select" name="PapersType" id="GoldPapersType">
+                                <option value="3">身份证</option>
+                                <option value="13">港澳居民证</option>
+                                <option value="10">台胞证</option>
+                                <option value="4">护照</option>
+                                <option value="12">其他</option>
+                            </select>
+                        </dd>
+                        <dd style="margin-top:5px;"><em>用户密码：</em><em style="width:40%;">手机后六位数</em></dd>
+                        <dd style="margin-top:5px;"><em>购买金额：</em><em style="color:#e3820b;">198元</em></dd>
+                    </dl>
+                </div>
+            </li>
+            <li><span>银卡会员</span><i>√</i>
+
+                <div class="buy-card-channel-text">
+                    <dl>
+                        <dd><input class="input_one" placeholder="姓名" id="SilverName"></dd>
+                        <dd><input class="input_three" placeholder="手机号" id="SilverTel"></dd>
+                        <dd class="dd_i_s">
+                            <input class="input_two" placeholder="证件号码" id="SilverPapersNo" autocomplete="off">
+                            <select class="select" name="PapersType" id="SilverPapersType">
+                                <option value="3">身份证</option>
+                                <option value="13">港澳居民证</option>
+                                <option value="10">台胞证</option>
+                                <option value="4">护照</option>
+                                <option value="12">其他</option>
+                            </select>
+                        </dd>
+                        <dd style="margin-top:5px;"><em>用户密码：</em><em style="width:40%;">手机后六位数</em></dd>
+                        <dd style="margin-top:5px;"><em>购买金额：</em><em style="color:#e3820b;">38元</em></dd>
+                    </dl>
+                </div>
+            </li>
+            <!--点击普卡，直接跳转至注册页面-->
+            <li><span>普卡会员</span><i>√</i></li>
+        </ul>
+        <div id="sureDiv"><a class="rd_cli" href="javascript:;" id="sureBtn">确认购买</a></div>
+      </div>
+ </div>
+<!--wrapper-date end-->
+
+</div>
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/member.js"></script>
+<!--load end-->
+</body>
+</html>

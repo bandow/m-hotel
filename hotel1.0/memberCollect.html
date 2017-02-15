@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/member.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+</head>
+
+<body>
+<div class="viewport viewport-member">
+<!--header start-->
+ <header id="header">
+   <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+   <a class="c">常住、收藏酒店</a>
+   <a class="edit r fs0-75">编辑</a>
+ </header>
+<!--header end-->
+<!--wrapper-member start-->
+ <div class="wrapper-member wrapper-collect">
+  <!--swiper start-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/collect.jpg"/></div>
+            <div class="swiper-slide"><img src="images/collect.jpg"/></div>
+            <div class="swiper-slide"><img src="images/collect.jpg"/></div>
+        </div>
+    </div>
+    <!--swiper end-->
+    <div class="collect">
+      <dl class="collect-dl">
+        <dt class="h2 lh2 fs0-8 c-666"><i class="iconfont">&#xe665;</i>广州</dt>
+        <dd class="bg-fff h2 lh2 fs0-8 c-999"><i class="i-start"></i><i class='i-end iconfont'>&#xe666;</i><span class="l">广州番禺大石店</span><a class="r fs0-7 mr1 td-no" href="#">查看详情</a></span></dd>
+        <dd class="bg-fff h2 lh2 fs0-8 c-999"><i class="i-start"></i><i class='i-end iconfont'>&#xe666;</i><span class="l">广州白云山店</span><a class="r fs0-7 mr1 td-no" href="#">查看详情</a></dd>
+      </dl>
+      <dl class="collect-dl">
+        <dt class="h2 lh2 fs0-8 c-666"><i class="iconfont">&#xe665;</i>武汉</dt>
+        <dd class="bg-fff h2 lh2 fs0-8 c-999"><i class="i-start"></i><i class='i-end iconfont'>&#xe666;</i><span class="l">武汉光谷步行街店</span><a class="r fs0-7 mr1 td-no" href="#">查看详情</a></span></dd>
+        <dd class="bg-fff h2 lh2 fs0-8 c-999"><i class="i-start"></i><i class='i-end iconfont'>&#xe666;</i><span class="l">武汉怡程酒店</span><a class="r fs0-7 mr1 td-no" href="#">查看详情</a></dd>
+         <dd class="bg-fff h2 lh2 fs0-8 c-999"><i class="i-start"></i><i class='i-end iconfont'>&#xe666;</i><span class="l">武汉怡程酒店</span><a class="r fs0-7 mr1 td-no" href="#">查看详情</a></dd>
+      </dl>
+      <a class="collect-a w090 h2 lh2 c-fff tc fs0-75 bg-a50000 br-5px td-no" href="#">删除选中</a>
+    </div>
+    
+ </div>
+<!--wrapper-member end-->
+</div>
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/member.js"></script>
+<script>
+ var mySwiper = new Swiper('.swiper-container',{
+	pagination : '.swiper-pagination',
+    loop : true,       //循环
+    autoplay: 3000,    //可选选项，自动滑动
+});
+</script>
+<!--load end-->
+</body>
+</html>

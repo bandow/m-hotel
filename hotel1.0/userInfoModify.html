@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+
+<body style="background-color:#f7f7f7;">
+<div class="viewport">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">会员信息修改</a>
+    </header>
+    <!--header end-->
+    <!--user-info-modify start-->
+    <div class="user-info-modify">
+        <div class="modify br-3px bg-fff">
+            <herader class="id mt0-5 display-b h-auto mb0-5">
+                <div class="l w050">
+                    <div class="id-img bg-fff">
+                        <span class="w3 h1-5 lh1-5 br-10px c-fff fs0-75 display-b tc">上传</span>
+                    </div>
+                    <p class="fs0-75 tc c-666 lh1-5">身份证正面照</p>
+                </div>
+                <div class="r w050">
+                    <div class="id-img bg-fff">
+                        <span class="w3 h1-5 lh1-5 br-10px c-fff fs0-75 display-b tc">上传</span>
+                    </div>
+                    <p class="fs0-75 tc c-666 lh1-5">身份证反面照</p>
+                </div>
+            </herader>
+            <div class="modify-list lh2 bg-fff">
+                <h3 class="fs0-75 c-666">修改类型：</h3>
+                <ul>
+                    <li class="m-li1 fs0-75 tc w033-3 c-666"><i class="iconfont"><em></em></i>证件</li>
+                    <li class="m-li2 fs0-75 tc w033-3 c-666"><i class="iconfont"><em style="display:block;"></em></i>手机号</li>
+                    <li class="m-li3 fs0-75 tc w033-3 c-666"><i class="iconfont"><em></em></i>姓名</li>
+                </ul>
+            </div>
+            <div class="from">
+                <p class="id-text">
+                    <select class="select fs0-75 c-666 ffmy" name="PapersType" id="BlackPapersType">-->
+                        <option value="3">身份证</option>
+                        <option value="13">港澳居民证</option>
+                        <option value="10">台胞证</option>
+                        <option value="4">护照</option>
+                        <option value="12">其他</option>
+                    </select>
+                    <input type="text" />
+                </p>
+                <p class="tel" style="display:block;">
+                    <span class="fs0-75 c-666">手机号</span>
+                    <input type="text" />
+                </p>
+                <div class="verify-code" style="display:block;">
+                    <span class="fs0-75 c-666">验证码</span>
+                    <input type="text" />
+                    <em class="get-code br-5px fs0-7 c-fff"><i class="iconfont">&#xe661;</i>短信验证码</em>
+                    <em class="voice-code br-5px fs0-7 c-fff bg-ff9a14"><i class="iconfont">&#xe61f;</i>语音验证码</em>
+                    <div class="cope-text c-666">手机验证码已发没收到短信？<a class="fs0-6 c-666 cope-time" href="javascript:;">60秒后点击此获取语音验证码</a></div>
+                </div>
+                <p class="name">
+                    <span class="fs0-75 c-666">姓名</span>
+                    <input type="text" />
+                </p>
+            </div>
+        </div>
+
+        <a href="javascript:;" class="modify-a fs0-75 br-5px bg-a50000 tc lh2 h2 c-fff td-no display-b ml1 mr1 mt2 mb1">提交</a>
+    </div>
+    <!--user-info-modify end-->
+</div>
+
+
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function(){
+        $(".m-li1").on("click",function(){
+            idText();
+        });
+        $(".m-li2").on("click",function(){
+            Tel();
+        });
+        $(".m-li3").on("click",function(){
+            Name();
+        });
+        $(".get-code").on("click",function(){
+            $(".cope-text").show();
+        });
+        $(".cope-time").on("click",function(){
+            $(".get-code").hide();
+            $(".voice-code").show();
+            $(".cope-text").hide();
+        });
+        $(".voice-code").on("click",function(){
+            $(".cope-text").show().text("请耐心等待，您将会接到4008816150的电话为您播报验证码");
+        });
+
+    })
+    function idText(){
+        $(".id-text").show();
+        $(".tel").hide();
+        $(".verify-code").hide();
+        $(".name").hide();
+        $(".m-li1").find("em").show();
+        $(".m-li2").find("em").hide();
+        $(".m-li3").find("em").hide();
+    }
+    function Tel(){
+        $(".id-text").hide();
+        $(".tel").show();
+        $(".verify-code").show();
+        $(".name").hide();
+        $(".m-li1").find("em").hide();
+        $(".m-li2").find("em").show();
+        $(".m-li3").find("em").hide();
+    }
+    function Name(){
+        $(".id-text").hide();
+        $(".tel").hide();
+        $(".verify-code").hide();
+        $(".name").show();
+        $(".m-li1").find("em").hide();
+        $(".m-li2").find("em").hide();
+        $(".m-li3").find("em").show();
+    }
+
+</script>
+<!--load end-->
+</body>
+</html>

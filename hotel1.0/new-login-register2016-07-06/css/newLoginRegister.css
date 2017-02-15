@@ -1,0 +1,410 @@
+/*
+*登录东呈账号
+*/
+body{font-family: Tahoma,Helvetica,"Microsoft Yahei","微软雅黑",Arial,STHeiti;background-color:#f0f0f0;}
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=tel], textarea {
+    border:0;
+    display:block;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255,0,0,0);
+    font-size: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    color: #333;
+    line-height: 20px;
+}
+input[type=submit], input[type=button] {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+#header .r{margin-left:-5%; width:15%;}
+.wrapper-login {padding-top:2.4rem;width:100%;height:auto;overflow:hidden; }
+.form-wrapper {padding: 0 15px;  -webkit-box-sizing: border-box;}
+.img-div { width:100%;height:100px;margin:1.5rem 0;}
+.img-div-add{width:100%;height:80px;margin:1rem 0; display:none;}
+.logo-dom {width:140px;height:86px;margin:0 auto;}
+.user-img {
+    height: 80px;
+    margin: 0 auto;
+    width: 80px;
+    border-radius: 80px;
+    border: 1px solid #e7e7e7;
+    overflow: hidden;
+}
+.user-img img {
+    width: 76px;
+    height: 76px;
+    top: 2px;
+    left: 2px;
+    position: relative;
+    border-radius: 80px;
+}
+.form-item{
+    display:-webkit-box;
+    display:box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    height: 50px;
+    padding: 0 14px;
+    background: #fff;
+    border-radius:10px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.form-item:before {
+    background: #fff;
+    content: "";
+    -webkit-box-sizing: border-box;
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+}
+.form-wrapper .form-item-username,.form-wrapper .form-item-username:before {
+    margin-bottom:0;
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-wrapper .form-item-password,.form-wrapper .form-item-password:before{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.form-input-mobile input {
+    z-index: 2;
+    position: relative;
+    margin: 1px;
+}
+.form-input-mobile span {
+    z-index: 10;
+    position: relative;
+}
+.form-item .input-aide {
+    width: 18px;
+    height: 16px;
+    display: block;
+    cursor: pointer;
+    margin-top: 17px;
+    margin-left: 5px;
+}
+.account-login {
+    color: #999;
+    font-size: 14px;
+    padding: 0 5px;
+    height: auto;
+    overflow: hidden;
+}
+.form-item-btn {
+    background: #f1f1f1;
+    border: 0;
+    margin-top:25px;
+    padding:0;
+}
+.pass-button-full-disabled {
+    color: #90b6ff;
+    opacity: 1;
+}
+.pass-button-full{
+    color: #fff;
+    font-size: 16px;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 48px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-tap-highlight-color: rgba(255,0,0,0);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border: 1px solid #a50000;
+    background: #a50000;
+}
+.form-item-btn:before{
+    background:none;
+    border:none;
+}
+.account-reg{font-size:14px; margin:40px 0 20px;text-align:center;}
+.account-reg:before{
+    content: "";
+    margin-right:10px;
+    width:80px;
+    height:1px;
+    background-color:#999;
+    display: inline-block;
+    vertical-align: middle;
+}
+.account-reg:after{
+    content:"";
+    margin-left:10px;
+    width:80px;
+    height:1px;
+    background-color:#999;
+    display: inline-block;
+    vertical-align: middle;
+}
+.account-third{text-align:center; padding-bottom:10px;}
+.account-third a{margin-left:5%;}
+.account-third a:first-child{margin-left:0;}
+
+/*
+*快速注册
+*/
+.form-item-fast-username{
+    margin:20px 0;
+}
+.fast-text{font-size:14px;}
+.fast-bottom{position:absolute;bottom:40px;text-align:center;width:70%;left:15%;}
+.fast-bottom a{position:relative;width:50%; text-align:center; display:block;float:left;font-size:14px;color:#3077bd}
+.fast-bottom a:nth-child(2):before{
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color:#999;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*
+*填写找回帐号
+*/
+.text-head{ font-size:14px;margin-top:15px; margin-bottom:10px;}
+.form-wrapper .form-item-phone, .form-wrapper .form-item-phone:before {
+    margin-bottom: 0;
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-wrapper .form-item-code, .form-wrapper .form-item-code:before {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-bottom:25px;
+}
+/*.fast-text a{color:#3077bd;}*/
+.verifyCode-img{
+    display: block;
+    height: 36px;
+    margin-top: 7px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    width: auto;
+}
+
+/*
+*忘记账号
+*/
+.user-forgot {
+    border-bottom: 0;
+    background: #fff;
+    margin-top: 0;
+}
+.user-forgot .list-icon {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    background-repeat: no-repeat;
+    background-position: 17px 50%;
+    width: 100%;
+    padding: 5px 10px 5px 66px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #333;
+    height: 100px;
+    -webkit-background-size: 50px 50px;
+    background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+}
+.user-forgot .list-icon:before {
+    content: "";
+    -webkit-box-sizing: border-box;
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0;
+}
+.user-forgot .list-icon {
+    width: 100%;
+    border-top: 0;
+    position: relative;
+    cursor: pointer;
+    padding-top: 12px;
+    height: 100px;
+    padding-top: 25px;
+    background-color: #fff;
+}
+.user-forgot .list-icon-arr {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    cursor: pointer;
+    margin-top: 42px;
+    margin-left: 5px;
+    float: right;
+}
+.list-icon-text {
+    height: 50px;
+    padding-left: 10px;
+}
+.list-icon-text span{font-size:14px;color:#b2b2b2;}
+.list-icon-email .list-icon-text span{line-height:50px;}
+.list-icon div:nth-child(1) {
+    display: block;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    padding-right: 10px;
+}
+.client-service {
+    position: absolute;
+    bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+.client-service span{color:#ccc; font-size:14px;}
+.client-service span em{  color: #96aecf;  }
+/*
+*验证手机号
+*/
+.vcode-page { padding: 0 10px;  }
+.checkTip {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #979797;
+}
+.checkTip span{color:#a50000;}
+.checkPhone {
+    width: 100%;
+    font-size:32px;
+    text-align: center;
+    line-height: 35px;
+    padding:20px 0;
+}
+.form-input-vcode {
+    width: 60%;
+    float: left;
+}
+.form-input-button {
+    width: 36%;
+    float: right;
+}
+.form-input-mobile {
+    position: relative;
+    margin-bottom:10px;
+}
+.form-input-mobile .vcode-span {
+    position: static;
+}
+.pass-button-vcode {
+    text-align: center;
+    width: 98%;
+    height: 48px;
+    border: 0;
+    background: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    color:#a50000;
+}
+.form-input-mobile:before {
+    background: #fff;
+    content: "";
+    -webkit-box-sizing: border-box;
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+}
+.form-item-verify{margin:10px 0 20px;}
+.form-item-verify .pass-button-full{ width:100%;}
+.form-wrapper .form-verify-Phone{position: relative;margin-bottom: 10px;}
+.verify-text{font-size:14px;}
+.verify-text a{color:#3077bd;}
+.checkTip-password{
+    width: 100%;
+    padding-top: 20px;
+    font-size: 14px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+.checkTip-password-b{
+    width: 100%;
+    font-size: 14px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+.form-item-verify-password .pass-button-full{ width:100%;}
+.img-revise{display:block;}
+.revise-text{font-size:14px;}
+.revise-a{font-size:14px;color:#3077bd;}
+
+/*
+*手机验证登录
+*/
+.form-item-btn-phone .pass-button-full{width:100%;}

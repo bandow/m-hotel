@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/orders.css">
+</head>
+
+<body>
+<div class="viewport viewport-orders-success"> 
+  <!--header start-->
+  <header id="header">
+    <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+    <a class="c">预订成功</a>
+    <a class="r fs0-65" href="javascript;">暂不支付</a>
+  </header>
+  <!--header end--> 
+  <!--wrapper-orders start-->
+  <div class="wrapper-orders-success">
+    <div class="t h-auto">
+     <div class="h-auto">
+      <div class="l"><i class="iconfont c-ff9a14">&#xe646;</i></div>
+      <div class="r">
+        <h3 class="fs1 c-ff9a14 lh1-2 fw-big">您的订单已预订成功</h3>
+        <p class="fs0-75 c-666 lh1-2">距离自动取消还有<span id="timer">59：59</span></p>
+      </div>
+     </div>
+      <p class="fs0-75 c-666 lh1-2 tc">本订单需在1小时内支付完成！</p>
+    </div>
+    <div class="t-info bg-fff">
+      <h3 class="mb0-5 c-333 fs0-75 fw-big lh1">订单信息</h3>
+      <p class="c-black fs0-75 lh1-2"><span class="c-999 mr1">酒店</span>广州白云山店</p>
+      <p class="c-black fs0-75 lh1-2"><span class="c-999 mr1">房间</span>1间</p>
+      <p class="c-black fs0-75 lh1-2"><span class="c-999 mr1">时间</span>入住07月27日&nbsp;&nbsp;3小时</p>
+      <p class="c-black fs0-75 lh1-2"><span class="c-999 mr1">地址</span>广州白云区大金钟路63号</p>
+      <p class="c-black fs0-75 lh1-2"><span class="c-999 mr1">电话</span>020-36484666</p>
+    </div>
+    <div class="c-pay mt0-5 bg-fff">
+      <ul>
+        <li class="h-auto">
+           <img class="l" src="images/orders_icon01.png"/>
+           <span class="l ml1 lh2 fs0-75 c-666">微信支付</span>
+           <i class="i-start r mt0-5 w1 h1 br-100"></i>
+        </li>
+        <li class="li-b h-auto">
+           <img class="l" src="images/orders_icon02.png"/>
+           <span class="l ml1 lh2 fs0-75 c-666">支付宝</span>
+           <i class="i-start r mt0-5 w1 h1 br-100"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="c-info bg-fff br-5px">
+      <p class="c-666 fs0-75 lh1-2">★ 入住须知：钟点房预订成功后，如不能在规定时间到店入住，请联系酒店，您到店后如房间正在打扫需稍作等待！</p>
+    </div>
+    <div class="b mt0-5 bg-fff mb0-5">
+      <ul>
+        <li class=""><a class="h2 lh2 fs0-75 c-666" href="memberAllOrders.html"><span class="l">我的订单</span><i class="r c-ccc lh2 iconfont">&#xe617;</i></a></li>
+        <li class="li-b"><a class="h2 lh2 fs0-75 c-666" href="#"><span class="l">继续预订</span><i class="r c-ccc lh2 iconfont">&#xe617;</i></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--wrapper-orders end--> 
+  <!--footer start-->
+  <footer class="footer">
+    <ul>
+      <li><a href="javascript:;"><span class="c-999">实付款：</span><span class="fs1">¥177</span></a></li>
+      <li class="on"><a href="hourPaySuccess.html">确认支付</a></li>
+    </ul>
+  </footer>
+  <!--footer end--> 
+</div>
+<!--load start--> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/common.js"></script> 
+<script src="js/orders.js"></script> 
+<script>
+ //钟点房预订后倒计时
+        var timeLeft = 60 * 60 * 1000;//这里设定的时间是
+        function p(s) {
+            return s < 10 ? '0' + s: s;   //补0
+        }
+
+        function countTime(){
+            if(timeLeft == 0){//这里就是时间到了之后应该执行的动作了，这里只是弹了一个警告框
+                alert("时间到");
+                return;
+            }
+            var startMinutes = parseInt(timeLeft / (60 * 1000), 10);
+            var startSec = parseInt((timeLeft - startMinutes * 60 * 1000)/1000);
+            document.getElementById('timer').innerHTML = p(startMinutes) + ":" + p(startSec);
+            timeLeft = timeLeft - 500;  //???
+            setTimeout('countTime()',1000);
+        }
+        countTime();
+</script>
+<!--load end-->
+</body>
+</html>

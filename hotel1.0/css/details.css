@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS wrapper-datails */
+/*newhoteldetails css*/
+#hoteldetails{background:#f0f0f0;}
+#header .r i{font-size:1.2rem; margin-left:-0.5rem;}
+.wrapper-datails{padding-top:2.4rem;width:100%;height:auto;background:#f0f0f0;overflow: hidden;}
+.swiper-bottom{position:absolute;z-index:1;left:0;bottom:0;height:1.5rem;width:100%;background:rgba(0,0,0,.7);}
+.swiper-bottom a{color:#fff;font:.75rem/1.5rem "Microsoft YaHei", Arial; text-decoration:none;float:right;margin-right: 1rem;}
+.swiper-bottom a i{font-size:1rem; margin-right:.3rem;}
+
+.datails-text{padding:0 5%;background-color:#fff; border-bottom:1px solid #ccc;}
+.datails-text a{text-decoration:none;width:100%;display: block; border-bottom:1px solid #ccc;height:auto;overflow:hidden;}
+.datails-text span{display:inline-block; padding:.3rem 0; float:left;}
+.datails-text .dt-12-18{ width:70.8333%;}
+.datails-text .dt-5-18{ width:25%;}
+.datails-text .dt-1-18{ width:4.1667%;}
+.datails-text .l{font-size:.75rem; color:#333;}
+.datails-text .l em{ font-size:.65rem; margin-left:.5rem;}
+.datails-text .l strong{font-size:1rem;color:#a50000;}
+.datails-text .c{font-size:.75rem;color:#a50000;text-align:right;padding-right:.3rem;}
+.datails-text .r{font-size:.75rem;color:#ccc; position:relative;}
+.datails-text .r i{font-size:.75rem;}
+.dt-t p{font:.85rem/1.2rem "Microsoft YaHei";}
+.dt-b .icon {font:.7rem/1rem "Microsoft YaHei";color: #fcaeae;}
+.datails-text .c-two,.datails-text .r-two{line-height:2rem;}
+.datails-text .on{border-bottom:none;}
+
+.datails-time{ margin:.3rem 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc; background-color:#fff; height:auto; overflow:hidden;}
+.datails-time .l{float:left;width:70%; padding:.5rem 5%; position:relative;}
+.datails-time .l a{ text-decoration:none; color:#ccc;}
+.datails-time .l a p{font:.75rem/1.25rem "Microsoft YaHei";}
+.datails-time .l a p span{color:#333; margin:0 .5rem 0 .3rem;}
+.datails-time .l a i{position:absolute;font-size:.75rem;top:0;right:5%;line-height:3.5rem;}
+.datails-time .r{float:left;width:30%;padding:.5rem 5%; height:3.5rem; border-left:1px solid #ccc;}
+.datails-time .r a{ position:relative; text-decoration:none;  display: block;}
+.datails-time .r i{ position:absolute; width:100%; text-align:center;display:block;font-size:1rem; color:#ccc;}
+.datails-time .r p{ text-align:center;font:.75rem/3.5rem "Microsoft YaHei";color:#a50000;}
+.expansion-up i{position:absolute;animation: RotateUp .5s forwards;-webkit-animation: RotateUp .5s forwards;}
+.expansion-down i{position:absolute;animation: RotateDown .5s forwards;-webkit-animation: RotateDown .5s forwards;}
+
+.datails-list{ background-color:#fff;border-top:1px solid #ccc;}
+.datails-list .item .item-top{position:relative;border-bottom:1px solid #ccc; padding:.3rem 5%; height:auto; overflow:hidden;}
+.item-top>div{float:left;}
+.dl-8-100{width:8%;}
+.dl-13-100{width:13%;}
+.dl-22-100{width:22%;}
+.dl-30-100{width:30%;}
+.dl-35-100{width:35%;}
+.item-top .img{ height:3.5rem; overflow:hidden;}
+.item-top .text{ text-align:center; padding-top:.8rem;}
+.item-top .text h2{font-size:.75rem; color:#333; line-height:1rem}
+.item-top .text p{font-size:.65rem; color:#999; line-height:1rem}
+.item-top .money{ text-align:center; padding-top:.8rem;}
+.item-top .money h3{font-size:.75rem; color:#333; line-height:1rem}
+.item-top .money h3 em{color:#ff9a14;}
+.item-top .money h3 strong{font-size:1.5rem;color:#ff9a14;font-weight:bold;}
+.item-top .money p{font-size:.65rem; color:#999; line-height:1rem;}
+.item-top .icon-r{position:absolute;right:0;top:0;height:4.2rem;width:3rem;z-index:2;display:block;}
+.item-top .icon-r i{color:#a50000;font-size:1rem;font-weight: bold;position:absolute;top:1.5rem;right:1rem;}
+.item-up .icon-r i{animation: RotateUp .5s forwards;-webkit-animation: RotateUp .5s forwards;}
+.item-down .icon-r i{animation: RotateDown .5s forwards;-webkit-animation: RotateDown .5s forwards;}
+@keyframes RotateUp{
+   0%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+   100%{    
+    -webkit-transform:rotate(540deg);transform:rotate(540deg);
+   }
+}
+@-webkit-keyframes RotateUp{
+   0%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+   100%{    
+    -webkit-transform:rotate(540deg);transform:rotate(540deg);
+   }
+}
+@keyframes RotateDown{
+   0%{    
+    -webkit-transform:rotate(540deg);transform:rotate(540deg);
+   }
+   100%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+}
+@-webkit-keyframes RotateDown{
+   0%{    
+    -webkit-transform:rotate(540deg);transform:rotate(540deg);
+   }
+   100%{    
+    -webkit-transform:rotate(0deg);transform:rotate(0deg);
+   }
+}
+.item-ordered{ position:relative;}
+.item-ordered .item-top .money h3 em{color:#a0a0a0;}
+.item-ordered .item-top .money h3 strong{font-size:1.5rem;color:#a0a0a0;font-weight:bold;}
+.ordered{ position:absolute; top:0; right:0; z-index:1; background-color:#a0a0a0;width:0px;height:0px;border-top:1.5rem solid #a0a0a0;border-left:3rem solid white;}
+.ordered p{position:absolute; top:-1.2rem; right:-0.6rem; width:2rem; z-index:1;color:#fff;font:.65rem/1rem "Microsoft YaHei"; transform:rotate(28deg); 
+-webkit-transform:rotate(28deg);}
+
+.datails-list .item .item-bottom{ background-color:#f0f0f0; height:auto; overflow:hidden; display:none;}
+.item-bottom .list{ border-bottom:1px solid #ccc; padding:.3rem 5%;}
+.ib-t>div{float:left;}
+.it-58-100{ width:58%;}
+.it-43-100{ width:43%;}
+.it-40-100{ width:40%;}
+.it-25-100{ width:25%;}
+.it-17-100{ width:17%;}
+.ib-t{width:100%; height:auto; overflow:hidden;}
+.ib-t .l h2{font:.75rem/1rem "Microsoft YaHei"; color:#333;}
+.ib-t .l h2 i{font-size:.85rem; color:#ccc; margin-left:.3rem;}
+.ib-t .l p{font:.75rem/1rem "Microsoft YaHei"; color:#999;}
+
+.ib-t .l p .solid-color{font-size:.65rem;}
+.ib-t .l p .red{color:#a50000;border:1px solid #a50000;}
+.ib-t .l p .grey{color:#acacac;border:1px solid #acacac;}
+.ib-t .l p .orange{color:#ff9900;border:1px solid #ff9900;}
+.ib-t .l p .blue{color:#43afe7;border:1px solid #43afe7;}
+
+.ib-t .c span{ color:#ff9a14; font:.75rem/3rem "Microsoft YaHei";}
+.ib-t .c strong{font-size:1.5rem; font-weight:bold;}
+.ib-t .r{float:right;}
+.ib-t .r a{background-color:#c70e0e; border:1px solid #c70e0e; border-radius:5px; width:3rem; height:3rem;float: right;color:#fff; display:block; text-align:center;text-decoration:none;font:.75rem/3rem "Microsoft YaHei";}
+.ib-t .r .two-layer{ background-color:#fff; border:1px solid #c70e0e;}
+.ib-t .r .two-layer .t{font:.75rem/2rem "Microsoft YaHei";background-color:#c70e0e;}
+.ib-t .r .two-layer .b{font:.65rem/1rem "Microsoft YaHei"; color:#c70e0e;}
+
+.ib-b{ width:100%; height:auto; overflow:hidden; background-color:#fff; border:1px solid #ccc; padding:.3rem 0;margin-top:.3rem;}
+.ib-b dl dd{float:left; width:25%; text-align:center; color:#999;font:.75rem/1rem "Microsoft YaHei";}
+.ib-b dl dd span{display:block;}
+.ib-b dl dd strong{display:block;font-weight:bold; text-align:center;}
+.ib-b dl .on{color:#a50000;}
+
+/*oldhoteldetails css*/
+.datails-text .left-text{float:left; width:60%;}
+.datails-text .right-img{float:right; width:35%;}
+.datails-text .right-img img{padding:.3rem 0;}
+.datails-text .dt-65-100{ width:65%;}
+.datails-text .dt-27-100{ width:27%;}
+.datails-text .dt-8-100{ width:8%;}
+
+
+/*see-hotel css*/
+.see-hotel{position:fixed;top:0;left:0;z-index:3;display:none;width:100%;height:100%;background:rgba(0,0,0,.8);}
+.see-hotel-center{position:fixed;left:5%;width:90%;z-index:4;display:none;height:auto;overflow:hidden;background-color:#f0f0f0;border-radius:5px;}
+.see-hotel-center .t{position:relative;padding:0 5%;height:2rem;}
+.see-hotel-center .t h2{font:.75rem/2rem "Microsoft YaHei";color:#a50000;}
+.see-hotel-center .t i{position:absolute;top:0;width:3rem;height:3rem;text-align:center;right:-.5rem;line-height:2rem;color:#666;}
+.see-hotel-center .c-t{position:relative;width:100%; height:auto; overflow:hidden;}
+.see-hotel-center .c-t a{position:absolute;left:0;bottom:0;width:100%;height:1.5rem;background:rgba(0,0,0,.5);text-align:right;font:.75rem/1.5rem "Microsoft YaHei";color:#fff; text-decoration:none; padding-right:5%;}
+.see-hotel-center .c-t a i{font-size:1rem; margin-right:.3rem;}
+.see-hotel-center .c-b{ background-color:#fff; padding:5%;}
+.see-hotel-center .c-b p{font:.75rem/1.2rem "Microsoft YaHei";color:#333;}
+.see-hotel-center .c-b p i{color:#fcaeae; font-size:1rem; margin-right:.5rem;}
+.see-hotel-center .b{padding:0 5%;height:2.5rem;}
+.see-hotel-center .b span{color:#333;font:.75rem/2.5rem "Microsoft YaHei";}
+.see-hotel-center .b span em{color:#ff9a14;}
+.see-hotel-center .b span strong{font-size:1.5rem;color:#ff9a14; font-weight:bold;}
+.see-hotel-center .b a{float:right; display:inline-block; background-color:#c70e0e;color:#fff;font:.75rem/1.8rem "Microsoft YaHei";border-radius:5px; padding:0 1.5rem; text-decoration:none; margin-top:.35rem;}
+
+/* CSS hour-datails */
+.hour-datails-text{ padding:0 5%;}
+.hour-item-top{border-bottom: 1px solid #ccc; padding: .3rem 5%;}
+.hour-item-top .prepaid{ border:1px solid #48b134;color:#48b134;font:.6rem/1rem "Microsoft YaHei";height:1rem; padding:0 .2rem margin-left:.2rem;}
+.hour-item-top .hour{border:1px solid #ff217a; color:#ff217a;font:.65rem/1rem "Microsoft YaHei";height:1rem;padding:0 .2rem;margin-left: .2rem;}
+.hour-item-top .text{padding-top:.45rem;}
+.hour-item-top .text h2{ line-height:1.5rem;}
+.hour-booking a{ 
+  background-color: #c70e0e;
+  border: 1px solid #c70e0e;
+  border-radius: 5px;
+  width: 3rem;
+  height: 3rem;
+  float: right;
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font: .75rem/3rem "Microsoft YaHei";
+}
+.hour-booking .null{ background-color:#a0a0a0; border: 1px solid #a0a0a0;}

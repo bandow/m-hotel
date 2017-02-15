@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>验证手机号</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="css/newLoginRegister.css">
+    <style>
+        .form-item .input-pwdToggle { background: url('images/password-close.png') no-repeat 0 0;-webkit-background-size: 18px 16px; width: 20px;}
+        .form-item .input-pwdToggle-show{ background: url('images/password-open.png') no-repeat 0 0; -webkit-background-size: 18px 16px; width: 20px;}
+        .input-clearValue{background: url('images/close.png') no-repeat center center;width:19px; background-size: 15px 15px; cursor: pointer; display:none;}
+        .form-item .input-renovate{ background: url('images/renovate.png') no-repeat 0 0; background-size:20px 16px; width: 20px; }
+    </style>
+</head>
+
+<body>
+<div class="viewport viewport-login">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">验证手机号</a>
+    </header>
+    <!--header end-->
+    <!--wrapper-login start-->
+    <div class="wrapper-login">
+        <form class="form-wrapper">
+           <div class="vcode-page">
+               <p class="checkTip">我们已经发送了<span>验证码</span>到您的手机</p>
+               <p class="checkPhone c-666">137 1923 6677</p>
+               <p class="form-item form-item-code form-input-mobile form-verify-Phone">
+                   <input type="text" name="password" class="text-input" id="login-code" placeholder="请输入验证码" value="">
+                   <span class="input-clearValue" onclick="closeIcon2();"></span>
+                   <img class="verifyCode-img" src="images/genimage.png" width="100" height="40">
+                   <span  class="input-aide input-renovate"></span>
+               </p>
+               <div class="h-auto">
+                    <p class="form-item form-input-mobile form-input-vcode">
+                        <input type="tel" name="password" id="smsLogin-password" class="text-input" value="" placeholder="请输入验证码"  onclick="closeIcon1();" >
+                        <span class="input-clearValue"></span>
+                    </p>
+                    <p class="form-input-mobile form-input-button">
+                        <input type="button" value="重新获取验证码" class="pass-button-vcode" >
+                    </p>
+                </div>
+               <!--第三方登录-验证手机号 start-->
+               <p class="form-item form-item-username form-input-mobile">
+                   <input type="text" name="username" class="text-input" maxlength="60" placeholder="您的姓名" value="" id="login-username">
+                   <span class="input-clearValue" onclick="closeIcon3();"></span>
+               </p>
+               <p class="form-item form-item-password form-input-mobile">
+                   <input type="password" name="password" class="text-input" id="login-password" placeholder="密码由字母与数字组合" value="">
+                   <span class="input-clearValue" onclick="closeIcon4();"></span>
+                   <span id="login-pwdToggle" class="input-aide input-pwdToggle"></span>
+               </p>
+               <!--第三方登录-验证手机号 end-->
+               <p class="form-item form-item-btn form-item-verify">
+                    <input id="smsLogin-submit" type="submit" value="提交" class="pass-button-full pass-button-full-disabled" >
+                </p>
+               <p class="verify-text c-999 tc">收不到短信？使用<a class="td-no" href="">语音验证码</a></p>
+           </div>
+        </form>
+    </div>
+    <!--wrapper-login end-->
+</div>
+
+
+
+<!--load start-->
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(e){
+        var size = $(window).width() / 18;
+        $("html").css('font-size', size);
+        if ($(window).width() >= 640) {
+            $("html").css('font-size', '24px');
+        }
+        //输入手机号码
+        $("#smsLogin-password").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        $("#login-code").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+
+        //第三方登录-验证手机号 start
+        $("#login-username").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        $("#login-password").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        $("#login-pwdToggle").on("click",function(){
+            if($(this).hasClass("input-pwdToggle-show")){
+                $(this).removeClass("input-pwdToggle-show");
+                $("#login-password").attr("type","password");
+            }else{
+                $(this).addClass("input-pwdToggle-show");
+                $("#login-password").attr("type","text");
+            }
+        });
+
+    });
+
+    function closeIcon1(){
+        $("#smsLogin-password").val("").next().hide();
+    }
+    function closeIcon2(){
+        $("#login-code").val("").next().hide();
+    }
+
+    //第三方登录-验证手机号 start
+    function closeIcon3(){
+        $("#login-username").val("").next().hide();
+    }
+    function closeIcon4(){
+        $("#login-password").val("").next().hide();
+    }
+
+
+</script>
+<!--load end-->
+</body>
+</html>

@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* CSS coupons */
+.viewport-coupons{background:#f0f0f0;}
+.wrapper-coupons{width:100%;height:auto;overflow: hidden; padding-bottom:2rem;}
+.coupons-top{ position:fixed; top:2.4rem; left:0; z-index:3; width:100%; height:auto; border-bottom:.2rem solid #ccc; background-color:#fff;}
+.coupons-top .tabs{ height:auto; background-color:#fff;}
+.coupons-top .tabs a{ position:relative; float:left;width:25%;text-align:center;text-decoration:none;color:#333; font-size:.75rem; line-height:1.6rem; padding:.3rem 0 .2rem 0; margin:.1rem 0;height:auto;}
+.coupons-top .tabs a p{ line-height:1rem;}
+.coupons-top .tabs a img{ margin:0 auto; width:60%;}
+.swiper-pagination-bullet-active em{ position:absolute;left:5%;bottom:-.32rem; width:90%; display:block; background-color:#a50000; height:.2rem;}
+.swiper-pagination-bullet{ opacity:1;width:auto;height:auto; display:inline-block;border-radius:0; background:#fff;}
+.coupons-list{margin:.9rem auto .1rem;width:94%;box-shadow: 1px 1px 1px #ccc;}
+.coupons-list-t{padding:5%;}
+.coupons-list-01{background-color:#764ba5;}
+.coupons-list-02{background-color:#00a762;}
+.coupons-list-03{background-color:#0193e6;}
+.coupons-list-04{background-color:#e87a90;}
+.coupons-list-05{background-color:#ffcc33;}
+.coupons-list-overdue{ background-color:#b9b9b9;}
+.coupons-list-b{position:relative;padding:0 5%;}
+.coupons-list-b i{ font-size:1rem; margin-right:.3rem;}
+.coupons-list-b em{position:absolute; top:-.2rem; width:.5rem; height:.5rem; background-color:#fff;border-radius:100%;}
+.coupons-list-b .em1{left:.2rem;}
+.coupons-list-b .em2{left:.9rem;}
+.coupons-list-b .em3{left:1.6rem;}
+.coupons-list-b .em4{left:2.3rem;}
+.coupons-list-b .em5{left:3rem;}
+.coupons-list-b .em6{left:3.7rem;}
+.coupons-list-b .em7{left:4.4rem;}
+.coupons-list-b .em8{left:5.1rem;}
+.coupons-list-b .em9{left:5.8rem;}
+.coupons-list-b .em10{left:6.5rem;}
+.coupons-list-b .em11{left:7.2rem;}
+.coupons-list-b .em12{left:7.9rem;}
+.coupons-list-b .em13{left:8.6rem;}
+.coupons-list-b .em14{left:9.3rem;}
+.coupons-list-b .em15{left:10rem;}
+.coupons-list-b .em16{left:10.7rem;}
+.coupons-list-b .em17{left:11.4rem;}
+.coupons-list-b .em18{left:12.1rem;}
+.coupons-list-b .em19{left:12.8rem;}
+.coupons-list-b .em20{left:13.5rem;}
+.coupons-list-b .em21{left:14.1rem;}
+.coupons-list-b .em22{left:14.8rem;}
+.coupons-list-b .em23{left:15.5rem;}
+.coupons-list-b .em24{right:.2rem;}
+.viewport-coupons .footer ul li{width:50%;}
+
+/* CSS null-coupons */
+.coupons-i{display:block;font-size:6rem;}
+.coupons-a{margin:2rem auto 0;display:block; background-color:#ffa200;}
+.null-coupons p a{color:#ffa200;}
+
+/* CSS coupons-detail */
+.coupons-detail{padding:5%;}
+.coupons-detail-a,.coupons-detail-a1{display:block;}
+
+/* CSS coupons-check */
+.coupons-check,.check-b{padding:5%;}
+.check-t input{height:1.5rem;width:79%;outline: none;border-radius:3px;border:1px solid #ccc;}
+.check-t .phone .phone-a{background-color:#ffa200;}
+.check-t .check-a{ display:block;}
+
+/*CSS choice-coupons */
+.viewport-choice-coupons #header .r{ width:15%; margin-left:-5%;}
+.choice{position:relative;border:.2rem solid #ccc;}
+.choice .s{position:absolute;top:0;right:0;width:0;height:0;border-width:2rem 0 0 2.5rem;border-style:solid;border-color:#ccc transparent transparent transparent;}
+.choice .s i{position:absolute;top:-2rem;right:.1rem; font-size:1rem;color:#fff;}
+.choice-on{position:relative;border:.2rem solid #e11d4b;}
+.choice-on .s{border-color:#e11d4b transparent transparent transparent;}
+
+/*CSS coupons-detail2.0 */
+.wrapper-coupons-detail{background-color:#efefef;padding-bottom:0;}
+.coupons-detail{margin:2%;padding:3%;background-color:#fff;border-radius:5px;}
+.coupons-detail h1{position:relative;padding-bottom: 3%;border-bottom: 1px dotted #f0f0f0;}
+.coupons-detail h1:before{
+  content:"";
+  position:absolute;
+  left: -1rem;
+  bottom: -.5rem;
+  width:1rem;
+  height:1rem;
+  background-color:#f0f0f0;
+  border-radius:100%;
+}
+.coupons-detail h1:after{
+  content:"";
+  position:absolute;
+  right: -1rem;
+  bottom: -.5rem;
+  width:1rem;
+  height:1rem;
+  background-color:#f0f0f0;
+  border-radius:100%;
+}
+.coupons-detail-info .make{
+	display:block;
+	border-radius:5px;
+	background-color:#da004b;
+	line-height:2rem;
+	width:40%;
+	text-align:center;
+	text-decoration:none;
+	font-size:.75rem;
+	color:#fff;
+	margin:1rem auto 0;
+}
+.coupons-detail-info p{
+	color:#999;
+	font-size:.6rem;
+	line-height:2.4;
+	text-align:center;
+}
+.info-bottom{
+	padding:5% 0;
+	border-bottom: 1px dotted #f0f0f0;
+}
+.coupons-detail-explain{padding-top:5%;}
+.info-bottom-l{
+	font-size:.65rem;
+	float:left;
+}
+.info-bottom-r{
+	margin-left:20%;
+	font-size:.65rem;
+    color:#999;
+}
+.info-bottom-r .more{
+   text-decoration:none;
+   font-size:.65rem;
+   color:#999;
+   float: right;
+}
+.info-bottom-r .more i{
+	font-size:12px;
+}
+.coupons-detail-explain .explain-l{float:left;line-height: 1.5;}
+.coupons-detail-explain .explain-r{margin-left:20%;}
+.explain-r p{line-height:1.5;margin-bottom:.2rem;}
+
+/*CSS coupons-detail2-list*/
+.coupons-detail-list{
+	background-color:#fff;
+}
+.city-list-search{
+	margin:3% 5%;
+	background-color:#f4f4f4;
+	border-radius:5px;
+	padding:2% 3%;
+	height:auto;
+}
+.city-list-search .search-l{
+	float:left;
+	border-right:1px solid #ccc;
+	padding: 0 2%;
+	height:1.6rem;
+	position:relative;
+}
+.city-list-search .search-l span{
+	font-size:.75rem;
+	line-height:1.4rem;
+	color: #999;
+	position:relative;
+}
+.city-list-search .search-l .city-list{
+	position: absolute;
+	left: -17.5%;
+    top: 1.6rem;
+    display:none;
+    width: 117.5%;
+	background-color:#f4f4f4;
+	z-index:2;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.city-list-search .search-l .city-list ul li{
+	text-align:center;
+	color:#333;
+	font-size:.7rem;
+	line-height:2;
+}
+.city-list-search .search-l i{
+	font-size:12px;
+	color:#ccc;
+}
+.city-list-search .search-r{
+	position: relative;
+	margin-left:20%;
+	padding: 0 2%;
+	height:1.6rem;
+	padding-top: .2rem;
+}
+.city-list-search .search-r i{
+	position: absolute;
+	top:50%;
+	left:5%;
+	-webkit-transform: translate(0,-35%);
+	transform: translate(0,-35%);
+	font-size:20px;
+	color:#ccc;
+}
+.city-list-search .search-r input{
+	outline:none;
+	border:0;
+	background:none;
+	font-size:.75rem;
+	padding-left:12%;
+	color:#999;
+	font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+.list-name-address a{
+	position: relative;
+	display:block;
+	border-top:1px dotted #f0f0f0;
+	padding:2% 5%;
+	text-decoration:none;
+}
+.list-name-address a i{
+	position: absolute;
+	right:5%;
+	top:50%;
+	-webkit-transform: translate(0,-50%);
+	transform: translate(0,-50%);
+	color:#ccc;
+}
+.list-name-address a h2{
+	font-size:.75rem;
+	color:#000;
+	line-height: 2;
+}
+.list-name-address a p{
+	font-size:.6rem;
+	color:#999;
+	line-height: 1.5;
+}

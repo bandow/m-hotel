@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>订单详情</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<link rel="stylesheet" href="../css/order-details.css">
+</head>
+
+<body style="background-color:#eee;">
+<div class="viewport">
+<!--header start-->
+ <header id="header">
+   <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+   <a class="c">订单详情</a>
+   <div class="r fs0-65">取消</div>
+ </header>
+<!--header end-->
+<div class="order-details-wrapper h-auto">
+<div class="details">
+  <div class="details-t">
+    <div class="l"><i class="iconfont">&#xe603;</i></div>
+    <!--状态1-->
+    <div class="r">
+      <h2>订单提交</h2>
+      <p>13:37用户确认下单</p>
+    </div>
+     <!--状态2-->
+    <!--
+    <div class="r">
+      <h2>商品支付</h2>
+      <p>13:40门店确认接单</p>
+    </div>
+    -->
+    <!--状态3-->
+    <!--
+    <div class="r">
+      <h2>商家接单</h2>
+      <p>13:40门店确认接单</p>
+    </div>
+    -->
+    <!--状态4-->
+   <!-- 
+   <div class="r">
+      <h2>物品送达</h2>
+      <p>13:45商品已送达</p>
+    </div>
+    -->
+  </div>
+  <div class="details-c">  <!--状态1加class=details-c 状态2加class=details-c1 状态3加class=details-c2 状态3加class=details-c3-->
+    <ul class="dc-t">
+     <li><i class="t iconfont">&#xe635;</i><p>订单提交</p></li>
+     <li><i class="c1 add-c iconfont">&#xe690;</i><p>商品支付</p></li>
+     <li><i class="c2 iconfont">&#xe632;</i><p>商家接单</p></li>  
+     <li><i class="b iconfont">&#xe637;</i><p>物品送达</p></li>
+    </ul>
+    <em class="l"></em>
+    <em class="c"></em>
+    <em class="r"></em>
+  </div>
+   <div class="details-b">
+    <h3>广州白云山店<i class="iconfont">&#xe617;</i></h3>
+    <p><span class="span-l">不锈钢保温杯</span><span class="span-r"><em>×1</em>¥50.00</span></p>
+    <p><span class="span-l">杜蕾斯12只装</span><span class="span-r"><em>×1</em>¥49.90</span></p>
+   </div>
+</div>
+</div>
+</div>
+
+<!--load start-->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<!--load end-->
+</body>
+</html>

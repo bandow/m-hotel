@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>填写找回帐号</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="css/newLoginRegister.css">
+    <style>
+        .input-clearValue{background: url('images/close.png') no-repeat center center;width:19px; background-size: 15px 15px; cursor: pointer; display:none;}
+        .form-item .input-renovate{ background: url('images/renovate.png') no-repeat 0 0; background-size:20px 16px; width: 20px; }
+    </style>
+</head>
+
+<body>
+<div class="viewport viewport-login">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">填写找回帐号</a>
+    </header>
+    <!--header end-->
+    <!--wrapper-login start-->
+    <div class="wrapper-login">
+        <form class="form-wrapper">
+            <h3 class="text-head c-999">请填写要找回的帐号</h3>
+            <p class="form-item form-input-mobile">
+                <input type="tel" name="username" class="text-input" maxlength="60" placeholder="填写手机号" value="" id="login-phone">
+                <span class="input-clearValue" onclick="closeIcon1();"></span>
+            </p>
+            <!--<p class="form-item form-item-code form-input-mobile">-->
+                <!--<input type="text" name="password" class="text-input" id="login-code" placeholder="请输入验证码" value="">-->
+                <!--<span class="input-clearValue" onclick="closeIcon2();"></span>-->
+                <!--<img class="verifyCode-img" src="images/genimage.png" width="100" height="40">-->
+                <!--<span id="login-pwdToggle" class="input-aide input-renovate"></span>-->
+            <!--</p>-->
+            <p class="form-item form-item-btn">
+                <input type="submit" value="确定" id="login-submit" class="pass-button-full pass-button-full-disabled" disabled="disabled">
+            </p>
+            <p class="fast-text tc c-999">太久没登录？ <a class="c-999" href="userForgot.html">忘记帐号</a></p>
+        </form>
+    </div>
+    <!--wrapper-login end-->
+</div>
+
+
+
+<!--load start-->
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(e){
+        var size = $(window).width() / 18;
+        $("html").css('font-size', size);
+        if ($(window).width() >= 640) {
+            $("html").css('font-size', '24px');
+        }
+        //输入手机号码
+        $("#login-phone").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+        $("#login-code").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+
+    });
+
+    function closeIcon1(){
+        $("#login-phone").val("").next().hide();
+    }
+    function closeIcon2(){
+        $("#login-code").val("").next().hide();
+    }
+
+
+</script>
+<!--load end-->
+</body>
+</html>

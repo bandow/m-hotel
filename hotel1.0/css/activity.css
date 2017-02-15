@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS activity */
+.wrapper-activity{padding-top:2.4rem;width:100%;height:auto;overflow: hidden;}
+.activity-list{position:relative; border-bottom:1px solid #ccc; padding:5%;}
+.activity-list h3{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.activity-em{ position:absolute;top:.3rem;right:-1rem;padding:0.1rem 1rem; background-color:#e71f19;transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+/* CSS activity-detail */
+.activity-detail,.activity-detail-text{ padding:3%;}
+.activity-detail-text p{font-size:.75rem;line-height:1rem;color:#333; margin-bottom:.5rem;}

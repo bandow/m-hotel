@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/orders.css">
+</head>
+
+<body>
+<div class="viewport viewport-hour-date"> 
+  <!--header start-->
+  <header id="header">
+    <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+    <a class="c">入住时间段</a>
+  </header>
+  <!--header end--> 
+  <!--wrapper-hour start-->
+  <div class="wrapper-hour-date">
+  <div class="hour-date w090 h-auto">
+   <div class="hour-time h-auto">
+    <div class="l w015 fs0-75 c-666 tc">开始</div>
+    <div class="c w070">
+     <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <section class="swiper-slide"></section>
+            <section class="swiper-slide">10时<span>~</span>13时</section>
+            <section class="swiper-slide">11时<span>~</span>14时</section>
+            <section class="swiper-slide">12时<span>~</span>15时</section>
+            <section class="swiper-slide">13时<span>~</span>16时</section>
+            <section class="swiper-slide">14时<span>~</span>17时</section>
+            <section class="swiper-slide">15时<span>~</span>18时</section>
+            <section class="swiper-slide"></section>
+        </div>
+         </div>
+    </div>
+    <div class="r w015 fs0-75 c-666 tc">结束</div> 
+   </div>
+   <div class="h-auto"><a href="#" class="hour-a bg-a50000 w090 tc td-no h2 lh2 c-fff fs0-75 br-5px">保存</a></div>
+   <div class="hour-text bg-fff br-5px h-auto">
+    <p class="fs0-75 c-666 lh1-2">★ 钟点房可入住时间8：00~18：00，可预订时间为3小时，请在15:00前办理入住；</p>
+    <p class="fs0-75 c-666 lh1-2">★ 入住时间段为您当天最终入住时间，请提前安排好时间，如入住时间段未办理入住，即开始计时收费。超时将加收超时费用！</p>
+   </div>
+  </div>
+  </div>
+  <!--wrapper-hour end--> 
+</div>
+<!--load start--> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/common.js"></script> 
+<script src="js/swiper.min.js"></script>
+<script src="js/orders.js"></script> 
+<script>
+var mySwiper = new Swiper('.swiper-container',{
+    direction: 'vertical',  //垂直滑动
+    slidesPerView:3,
+	mousewheelControl : true
+})
+</script>
+<!--load end-->
+</body>
+</html>

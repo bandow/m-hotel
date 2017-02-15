@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+/*facility css*/
+.wrapper-facility{padding:2.4rem 0 2rem;}
+.text-list{padding:.5rem; height:auto; overflow:hidden; position:relative; border-bottom:1px solid #ccc;}
+.text-list .l{float:left;width:1.2rem; height:1.2rem; border-radius:100%; margin-right:.3rem;}
+.text-list .l i{display:block;color:#fff;line-height:1.2rem;text-align:center;font-size:.9rem; font-weight:normal;}
+.text-list .sky-blue{background-color:#52a9e3;}
+.text-list .aqua{background-color:#30cbab;}
+.text-list .violet{background-color:#8476cb;}
+.text-list .red{background-color:#eb4f38;}
+.text-list .red1{background-color:#e71f19;}
+.text-list .yellow{background-color:#ffcc33;}
+.text-list .coffee{background-color:#a69478;}
+.text-list .green{background-color:#33cc66;}
+.text-list .orange{background-color:#ff9933;}
+.text-list .red i{font-size:.7rem;}
+.text-list .red1 i{font-size:.7rem;}
+.text-list .orange i{font-size:.8rem;}
+.text-list .c{float:left; width:10rem;}
+.text-list .c h2{color:#333;font:bold .75rem/1.2rem "Microsoft YaHei";}
+.text-list .c p{color:#666;font:.75rem/1rem "Microsoft YaHei";}
+.text-list .a{position:absolute;right:3%;bottom:.5rem;display:block;color:#fff;background-color:#a50000;text-align:center;text-decoration:none;height:1.5rem; border-radius:5px;font:.75rem/1.5rem "Microsoft YaHei"; padding:0 5%;}
+.text-list .r{float:left; width:15.5rem;}
+.text-list .r h2{color:#333;font:bold .75rem/1.2rem "Microsoft YaHei";}
+.text-list .r p{color:#666;font:.7rem/1rem "Microsoft YaHei";}
+.text-list .b{width:100%;height:auto; overflow:hidden;}
+.text-list .b h3{ background-color:#f7f7f7; height:1.5rem;font:.75rem/1.5rem "Microsoft YaHei";color:#666; margin-top:.5rem;overflow:hidden;}
+.text-list .b h3 em{width:.3rem; height:1rem; margin:.25rem .3rem 0 0; background-color:#ffcc33; display:block; float:left;}
+.text-list .b ul{height:auto; overflow:hidden;}
+.text-list .b ul li{float:left; width:25%;font:.65rem/1rem "Microsoft YaHei";color:#666; margin-top:.5rem; overflow:hidden; white-space:nowrap;text-overflow: ellipsis;}
+.text-list .b p{margin:.5rem 15% 0;color:#666;font:.65rem/1.2rem "Microsoft YaHei"; text-align:center; border:1px solid #69b4e7; border-radius:30px;}
+.text-list .b p a{text-decoration:underline;color:#0000ff;}

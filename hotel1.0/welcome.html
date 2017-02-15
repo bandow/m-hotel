@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/welcome.css">
+</head>
+
+<body>
+<div class="viewport viewport-welcome">
+<!--wrapper-hotel start-->
+ <div class="wrapper-welcome">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/welcome01.png"/></div>
+            <div class="swiper-slide"><img src="images/welcome02.png"/></div>
+            <div class="swiper-slide">
+              <img src="images/welcome03.png"/>
+              <a class="welcome-a" href="#">马上体验</a> 
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div> 
+ </div>
+<!--wrapper-date end-->
+</div>
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/welcome.js"></script>
+<script>
+ var mySwiper = new Swiper('.swiper-container',{
+    pagination : '.swiper-pagination',
+    //loop : true,       //循环
+    //autoplay: 3000,    //可选选项，自动滑动
+	paginationClickable :true  //点击小圆按钮
+})
+</script>
+<!--load end-->
+</body>
+</html>

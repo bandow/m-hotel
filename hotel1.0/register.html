@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/login-register.css">
+</head>
+
+<body>
+<div class="viewport viewport-register">
+<!--header start-->
+ <header id="header">
+   <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+   <a class="c">东呈会在线注册</a>
+   <a href="login.html" class="r fs0-65">登录</a>
+ </header>
+<!--header end-->
+<!--wrapper-hotel start-->
+ <div class="wrapper-register">
+    <!--swiper-container start-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+        </div>
+    </div>
+    <!--swiper-container end-->
+    <div class="register h-auto">
+      <div class="name bg-fff h-auto mb0-5">
+       <span class="span-l l fs0-75 c-666 w030 lh2"><i class="c-red mr0-2">*</i>姓名：</span><input class="r" type="text" />
+      </div>
+      <div class="phone bg-fff h-auto mb0-5">
+       <span class="span-l l fs0-75 c-666 w030 lh2"><i class="c-red mr0-2">*</i>手机号码：</span><input class="r" type="text" />
+      </div>
+      <div class="message h-auto mb0-5">
+       <span class="span-l l fs0-75 c-666 w030 lh2"><i class="c-red mr0-2">*</i>短信验证：</span><input class="l" type="text" /><a class="r h2 lh2 tc br-5px w040 td-no bg-a50000 c-fff fs0-7" href="#">免费发送验证码</a>
+      </div>
+      <div class="password bg-fff h-auto mb0-5">
+       <span class="span-l l fs0-75 c-666 w030 lh2"><i class="c-red mr0-2">*</i>密码：</span><input class="r" type="text" />
+      </div>
+      <div class="confirm-password bg-fff h-auto mb0-5">
+       <span class="span-l l fs0-75 c-666 w030 lh2"><i class="c-red mr0-2">*</i>确认密码：</span><input class="r" type="text" />
+      </div>
+      <div class="btns"><a class="mt1 h2 lh2 tc br-5px w100 td-no bg-a50000 c-fff fs0-75" href="registerSuccess.html">免费注册</a></div>
+      <div class="bottom"><p class="tc fs0-75 lh2"><a href="login.html">我已是会员</a> | <a href="memberUpgrade.html">直接购买会员</a></p></div>
+      <div class="mt0-5"><img src="images/register_b.jpg"/></div>
+    </div>
+ </div>
+<!--wrapper-date end-->
+</div>
+
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/login-register.js"></script>
+<script>
+var mySwiper = new Swiper('.swiper-container',{
+  loop : true,       //循环
+  autoplay: 3000,    //可选选项，自动滑动
+})
+</script>
+<!--load end-->
+</body>
+</html>

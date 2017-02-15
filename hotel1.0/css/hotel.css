@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS hotel */
+.viewport-hotel{background:#f8f8f8;}
+#header .r i{font-size:1.2rem; margin-left:-0.5rem;}
+.wrapper-hotel{padding-top:2.4rem;width:100%;height:auto;overflow:hidden;}
+.switch-list{position:relative;}
+.switch-list li{ border-bottom:.1rem solid #ccc; height:1.8rem; line-height:1.8rem;}
+.switch-list .tabview-panels{position:absolute;left:0;bottom:0;width:50%;height:.1rem;background-color:#a50000;transition:left.5s;-webkit-transition:left.5s;}
+.switch-text .hotel-search{ display:none;} 
+.hotel-search ul li{padding:.5rem 3%; height:auto; overflow:hidden;background-color:#fff; border-bottom:1px solid #e7e7e7;}
+.hotel-search ul li .l{ width:12%;}
+.hotel-search ul li .c{ width:78%; float:left;}
+.hotel-search ul .city .c{ width:70%;}
+.hotel-search ul .city a{ display:block;}
+.hotel-search ul li .i-l{color:#fcaeae; font-size:1.5rem; display:inline-block;}
+.hotel-search ul .city .i-l{font-size:1.5rem;}
+.hotel-search .text{margin:1rem auto 0; padding:.5rem 5%;}
+.search-btn{display:block; margin:2rem auto 0;}
+.date-start,.date-end{ display:inline-block;}
+
+

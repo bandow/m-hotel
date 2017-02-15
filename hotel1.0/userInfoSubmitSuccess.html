@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+
+<body style="background-color:#f7f7f7;">
+<div class="viewport">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">会员信息修改</a>
+    </header>
+    <!--header end-->
+    <!--user-info-submit-success start-->
+    <div class="user-info-submit-success">
+        <i class="iconfont c-a50000 tc display-b mt2 mb1">&#xe693;</i>
+        <p class="lh2 fs0-75 tc c-666">信息提交成功</p>
+        <p class="lh2 fs0-75 tc c-666">我们将在<strong class="fw-big">24小时</strong>内为您修改完成</p>
+        <a href="javascript:;" class="modify-a fs0-75 br-5px bg-a50000 tc lh2 h2 c-fff td-no display-b ml1 mr1 mt2 mb1">关闭</a>
+    </div>
+    <!--user-info-submit-success end-->
+</div>
+
+
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(function(){
+        $(".m-li1").on("click",function(){
+            idText();
+        });
+        $(".m-li2").on("click",function(){
+            Tel();
+        });
+        $(".m-li3").on("click",function(){
+            Name();
+        });
+        $(".get-code").on("click",function(){
+            $(".cope-text").show();
+        });
+        $(".cope-time").on("click",function(){
+            $(".get-code").hide();
+            $(".voice-code").show();
+            $(".cope-text").hide();
+        });
+        $(".voice-code").on("click",function(){
+            $(".cope-text").show().text("请耐心等待，您将会接到4008816150的电话为您播报验证码");
+        });
+
+    })
+    function idText(){
+        $(".id-text").show();
+        $(".tel").hide();
+        $(".verify-code").hide();
+        $(".name").hide();
+        $(".m-li1").find("em").show();
+        $(".m-li2").find("em").hide();
+        $(".m-li3").find("em").hide();
+    }
+    function Tel(){
+        $(".id-text").hide();
+        $(".tel").show();
+        $(".verify-code").show();
+        $(".name").hide();
+        $(".m-li1").find("em").hide();
+        $(".m-li2").find("em").show();
+        $(".m-li3").find("em").hide();
+    }
+    function Name(){
+        $(".id-text").hide();
+        $(".tel").hide();
+        $(".verify-code").hide();
+        $(".name").show();
+        $(".m-li1").find("em").hide();
+        $(".m-li2").find("em").hide();
+        $(".m-li3").find("em").show();
+    }
+
+</script>
+<!--load end-->
+</body>
+</html>

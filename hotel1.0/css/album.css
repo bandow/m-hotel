@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+/*album css*/
+#hotel-album{background:#f0f0f0;}
+.wrapper-album{margin-top:2.4rem;margin-bottom:2rem;width:100%; height:auto;overflow:hidden;}
+.album .t{margin:2%;border:1px solid #a50000;height:2rem;border-radius:5px; background-color:#fff;}
+.album .t h2{ text-align:center; font:.75rem/2rem "Microsoft YaHei", Arial;color:#a50000;}
+.album .t h2 i{float:left;font-size:1.5rem;}
+.album .t h2 span{float:left;}
+.album .c{margin:0 2%;height:auto;overflow:hidden;}
+.album .c ul li{position:relative;float:left; width:48.5%; margin:0 2% 2% 0; border:1px solid #ccc;}
+.album .c ul .on{ margin:0 0 2% 0;}
+.album .c ul li p{ position:absolute;left:0;bottom:0;  width: 100%;background: rgba(0,0,0,0.5);height:1.5rem;font:.75rem/1.5rem "Microsoft YaHei", Arial;text-align: center;color:#fff; border-top:1px solid #000;}
+
+.album-footer{position:fixed;z-index:2;bottom:0;left:0;width:100%;height:1.5rem;background:#f0f0f0;}
+.album-footer .tabs a{float:left;width:25%;text-align:center;font:normal .8rem/1.3rem "Microsoft YaHei"; text-decoration:none;color:#333;}
+.swiper-pagination-bullet-active{border-bottom:.3rem solid #a50000;}
+.swiper-pagination-bullet{ opacity:1;width:auto;height:auto; display:inline-block;border-radius:0; background:#f0f0f0; }
+
+/*bigalbum css*/
+#big-album{background-color:#000;}
+.wrapper-big-album{width:100%; height:auto;overflow:hidden;}
+.big-img-album{width:100%;}
+.big-img-album img{width:100%;}
+.big-img-album p{font:.75rem/2rem "Microsoft YaHei", Arial;color:#fff;text-align:center;}

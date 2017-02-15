@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>快速注册</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="css/newLoginRegister.css">
+    <style>
+        .input-clearValue{background: url('images/close.png') no-repeat center center;width:19px; background-size: 15px 15px; cursor: pointer; display:none;}
+    </style>
+</head>
+
+<body>
+<div class="viewport viewport-login">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">快速注册</a>
+    </header>
+    <!--header end-->
+    <!--wrapper-login start-->
+    <div class="wrapper-login">
+        <form class="form-wrapper">
+
+            <p class="form-item form-item-fast-username form-input-mobile">
+                <input type="tel" name="username" class="text-input" maxlength="60" placeholder="手机号" value="" id="login-fast-username">
+                <span class="input-clearValue" onclick="closeIcon1();"></span>
+            </p>
+            <p class="form-item form-item-btn">
+                <input type="submit" value="获取短信验证码" id="login-submit" class="pass-button-full pass-button-full-disabled" disabled="disabled">
+            </p>
+            <p class="fast-text tc c-999">读并接受 <a class="c-999" href="">用户服务协议</a></p>
+        </form>
+    </div>
+    <!--wrapper-login end-->
+    <p class="fast-bottom"><a class="td-no" href="">我已是会员</a><a class="td-no" href="">直接购买会员</a></p>
+</div>
+
+
+
+<!--load start-->
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(e){
+        var size = $(window).width() / 18;
+        $("html").css('font-size', size);
+        if ($(window).width() >= 640) {
+            $("html").css('font-size', '24px');
+        }
+
+        $(".viewport-login").css("min-height",$(window).height());
+
+        //输入手机号码
+        $("#login-fast-username").on("keyup",function(){
+            $(this).next(".input-clearValue").css("display","block");
+        });
+
+    });
+
+    function closeIcon1(){
+        $("#login-fast-username").val("").next().hide();
+    }
+
+
+</script>
+<!--load end-->
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="不超过150个字符"/>
+<meta name="keywords" content=""/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title></title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/hotel.css">
+<link rel="stylesheet" href="css/daterangepicker.css">
+<!--loading css start-->
+<style>
+.load-layer {
+	position:fixed;
+	top:0; 
+	left:0;
+	display:block;
+	z-index:99;
+    background:rgba(0,0,0,.95);
+    width: 100%;
+    height: 100%;
+}
+.loading {
+  text-transform: uppercase;
+  font-family: 'Cabin Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 100pt;
+  text-align: center;
+  height: 120px;
+  line-height: 110px;
+  vertical-align: bottom;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  display: block;
+}
+
+.loading-2 {
+  top: 300px;
+  width: 473px;
+  height: 97px;
+  font-size: 0;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 0 auto;
+}
+
+.loading-2-text {
+  background:url(images/logo-loading.png) no-repeat;
+  width: 100px;
+  height: 70px;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: 200px bottom;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    background-size: 200px 0px;
+  }
+
+  100% {
+    background-size: 200px 200px;
+  }
+}
+.wave {
+  background-image:url(images/loading.png);
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px rgba(255, 255, 255, 0.06);
+  animation: wave-animation 1s infinite linear, loading-animation 3s infinite linear alternate;
+  background-size: 200px 100px;
+  background-repeat: repeat-x;
+  opacity: 1;
+  width: 100px;
+  height: 70px;
+}
+
+.wave-2 {
+  -moz-background-clip: initial;
+  -o-background-clip: initial;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  display: inline-block;
+  top:0;left:0;
+}
+
+.load-layer p{color:#fff;font-size:.75rem;position: absolute;top:55%;width:100%;text-align:center;}
+</style>
+<!--loading css end-->
+</head>
+
+<body>
+<div class="viewport viewport-hotel">
+<!--header start-->
+ <header id="header">
+   <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+   <a class="c">酒店查询</a>
+   <a class="r" href="javascript:;"><i class="iconfont">&#xe64a;</i></a>
+ </header>
+<!--header end-->
+<!--wrapper-hotel start-->
+ <div class="wrapper-hotel">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+            <div class="swiper-slide"><img src="images/login01.jpg"/></div>
+        </div>
+    </div>
+    <div class="switch">
+      <ul class="switch-list bg-fff h-auto">
+        <li class="l w050 fs0-75 c-666 tc">全日房</li>
+        <li class="r w050 fs0-75 c-666 tc">钟点房</li>
+        <div class="tabview-panels"></div>
+      </ul>
+      <div class="switch-text">
+        <section class="hotel-search h-auto" style="display:block;">
+             <ul>
+              <li class="city">
+                <div class="l"><i class="iconfont i-l">&#xe678;</i></div>
+                <div class="c lh2">
+                <a class="td-no" href="city.html">
+                  <span class="fs0-8 c-666">城市</span>
+                  <span class="fs0-8 c-a50000">北海</span>
+                  <i class="iconfont c-666 r">&#xe617;</i>
+                  </a>
+                </div>
+                <div class="r tc"><a class="td-no c-a50000" href="#"><i class="iconfont h1">&#xe620;</i><p class="ddd fs0-7 h1">我的位置</p></a></div>
+              </li>
+              <li class="date" id="date">
+                <div class="l"><i class="iconfont i-l">&#xe64f;</i></div>
+                <div class="c">
+                 <p class="c-ccc fs0-7 lh1-2">
+                   <span class="c-a50000 w030 fs0-8 date-start">06月02日</span>
+                   <span class="mr0-1 week-one">今天</span>
+                   <span>入住</span>
+                 </p>
+                 <p class="c-ccc fs0-7 lh1-2">
+                   <span class="c-a50000 w030 date-end fs0-8">06月03日</span>
+                   <span class="mr0-1 week-two">明天</span>
+                   <span class="mr0-1">离店</span>
+                   <span>共<em class="start-and-end">1</em>晚</span>
+                 </p>
+                </div>
+                <div class="r c-666 lh2-4"><i class="iconfont">&#xe617;</i></div>
+              </li>
+              <li class="filter">
+               <a href="screen.html">
+                <div class="l"><i class="iconfont i-l">&#xe64d;</i></div>
+                <div class="c h1-5"><span class="fs0-8 c-666 lh1-5">关键词</span><span class="c-ccc fs0-7 ml0-5 lh1-5">酒店名、商圈、品牌</span></div>
+                <div class="r c-666 h1-5"><i class="iconfont">&#xe617;</i></div>
+               </a>
+              </li>
+             </ul>
+             <a href="hotelList.html" class="search-btn h2 td-no lh2 c-fff tc bg-a50000 br-5px fs0-9 w080">查询</a>
+        </section>
+        <section class="hotel-search h-auto">
+             <ul>
+              <li class="city">
+                <div class="l"><i class="iconfont i-l">&#xe678;</i></div>
+                <div class="c lh2">
+                <a class="td-no" href="city.html">
+                  <span class="fs0-8 c-666">城市</span>
+                  <span class="fs0-8 c-a50000">北海</span>
+                  <i class="iconfont c-666 r">&#xe617;</i>
+                  </a>
+                </div>
+                <div class="r tc"><a class="td-no c-a50000" href="#"><i class="iconfont h1">&#xe620;</i><p class="fs0-7 h1">我的位置</p></a></div>
+              </li>
+              <li class="date">
+                <div class="l"><i class="iconfont i-l">&#xe64f;</i></div>
+                <div class="c"><span class="fs0-8 c-666 lh1-5">入住日期</span><span class="c-a50000 fs0-8 ml0-5 lh1-5">08月25日</span><span class="c-ccc fs0-7 ml0-5 lh1-5">周二</span></div>
+              </li>
+              <li class="time">
+               <a href="hourDate.html">
+                <div class="l"><i class="iconfont i-l">&#xe679;</i></div>
+                <div class="c h1-5"><span class="fs0-8 c-666 lh1-5">入住时间段</span><span class="c-a50000 fs0-8 ml0-5 lh1-5">8:00~10:00</span></div>
+                <div class="r c-666 h1-5"><i class="iconfont">&#xe617;</i></div>
+               </a>
+              </li>
+              <li class="filter">
+               <a href="screen.html">
+                <div class="l"><i class="iconfont i-l">&#xe64d;</i></div>
+                <div class="c h1-5"><span class="fs0-8 c-666 lh1-5">关键词</span><span class="c-ccc fs0-7 ml0-5 lh1-5">酒店名、商圈、品牌</span></div>
+                <div class="r c-666 h1-5"><i class="iconfont">&#xe617;</i></div>
+               </a>
+              </li>
+             </ul>
+             <div class="text w090 bg-fff br-5px">
+               <p class="fs0-75 lh1 c-666 mb0-3">★ 钟点房可入住时间8：00~18：00，可预订时间为3小时，请在15:00前办理入住；</p>
+               <p class="fs0-75 lh1 c-666">★ 入住时间段为您当天最终入住时间，请提前安排好时间，如入住时间段未办理入住，即开始计时收费。超时将加收超时费用！</p>
+             </div>
+             <a href="hourHotelList.html" class="search-btn h2 td-no lh2 c-fff tc bg-a50000 br-5px fs0-9 w080">查询</a>
+        </section>
+      </div>
+      
+    </div>
+     
+ </div>
+<!--wrapper-date end-->
+</div>
+<!--return-layer start-->
+<div class="return-layer">
+   <div class="return-layer-text layer-text bg-fff w080 br-5px">
+     <h3 class="bg-a50000 h0-5"></h3>
+     <div class="return-text-b">
+         <p class="fs0-75 c-666 lh1">定位失败，您可以通过在设置中开启定位服务，开启WIFI，以提高定位成功率，或选择城市查询</p>
+     </div>
+     <p class="return-p h-auto h2">
+         <a class="a-l l fs0-75 tc w050 lh2 td-no" href="javascript:;">知道了</a>
+         <a class="a-r r fs0-75 tc w050 lh2 td-no" href="#">选择城市</a>
+     </p>
+   </div>
+</div>
+<!--return-layer end-->
+
+<!--loading start-->
+<div class="load-layer"><div class="loading loading-2 wave wave-2"><div class="loading-2-text"></div></div><p>努力加载中</p></div>
+<!--loading end-->
+
+<!--load start-->
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/hotel.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/jquery.daterangepicker.js"></script>
+<script src="js/demo.js"></script>
+<!--load end-->
+</body>
+</html>

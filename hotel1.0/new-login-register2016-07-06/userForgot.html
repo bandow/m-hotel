@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, sycbbb@sina.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>忘记账号</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="css/newLoginRegister.css">
+    <style>
+        .user-forgot .list-icon-arr{ background: url('images/icon-arrow.png') no-repeat 50% 50%;background-size: 16px 16px; -webkit-background-size: 16px 16px; }
+        .user-forgot .list-icon-email {background-image:url('images/email.png');}
+        .user-forgot .list-icon-id {background-image:url('images/id.png');}
+        .user-forgot .list-icon-mobile {background-image:url('images/mobile.png');}
+    </style>
+</head>
+
+<body>
+<div class="viewport viewport-login">
+    <!--header start-->
+    <header id="header">
+        <a class="l" href="javascript:history.go(-1);"><i class="iconfont">&#xe600;</i></a>
+        <a class="c">忘记账号</a>
+    </header>
+    <!--header end-->
+    <!--wrapper-login start-->
+    <div class="wrapper-login">
+        <div class="mod-list user-forgot">
+            <a class="td-no" href="verifyPhone.html">
+                <div class="list-icon list-icon-email" id="icon-email">
+                    <div class="list-icon-text">
+                        <span>已绑定手机，可通过短信验证登录</span>
+                    </div>
+                    <div class="list-icon-arr"></div>
+                </div>
+            </a>
+            <a class="td-no" href="verifyPhonePassword.html">
+                <div class="list-icon list-icon-mobile" id="icon-mobile">
+                    <div class="list-icon-text">
+                        <span>已绑定手机，可通过验证重置密码，用户名请填写您绑定的手机号</span>
+                    </div>
+                    <div class="list-icon-arr"></div>
+                </div>
+            </a>
+            <a class="td-no" href="revisePasswordSuccess.html">
+                <div class="list-icon list-icon-id" id="icon-id">
+                    <div class="list-icon-text">
+                        <span>已经是持卡会员但没有登录密码，首次登录密码为注册是填写的证件号码的后四位</span>
+                    </div>
+                    <div class="list-icon-arr"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!--wrapper-login end-->
+    <div class="client-service">
+        <span>客服电话：<em>400 700 7899</em></span>
+    </div>
+</div>
+
+
+
+<!--load start-->
+<script src="../js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(e){
+        var size = $(window).width() / 18;
+        $("html").css('font-size', size);
+        if ($(window).width() >= 640) {
+            $("html").css('font-size', '24px');
+        }
+
+        $(".viewport-login").css("min-height",$(window).height());
+    });
+
+
+</script>
+<!--load end-->
+</body>
+</html>
