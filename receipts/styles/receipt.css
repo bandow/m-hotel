@@ -1,0 +1,1258 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for Mobile
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2016-10-18
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: "SimHei","Microsoft YaHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 18px; }
+
+@media (min-device-width: 320px) {
+  html {
+    font-size: 18px; } }
+@media (min-device-width: 360px) {
+  html {
+    font-size: 20px; } }
+@media (min-device-width: 375px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 384px) {
+  html {
+    font-size: 21px; } }
+@media (min-device-width: 400px) {
+  html {
+    font-size: 22px; } }
+@media (min-device-width: 414px) {
+  html {
+    font-size: 23px; } }
+@media (min-device-width: 480px) {
+  html {
+    font-size: 26px; } }
+@media (min-device-width: 520px) {
+  html {
+    font-size: 27px; } }
+@media (min-device-width: 533px) {
+  html {
+    font-size: 28px; } }
+@media (min-device-width: 560px) {
+  html {
+    font-size: 29px; } }
+@media (min-device-width: 568px) {
+  html {
+    font-size: 29px; } }
+@media (min-device-width: 600px) {
+  html {
+    font-size: 30px; } }
+@media (min-device-width: 640px) {
+  html {
+    font-size: 24px; } }
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+.header{
+  position: relative;
+  width:100%;
+  height:2rem;
+  background-color:#da004b;
+}
+.header h1{
+  font:.7rem/2rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  text-align: center;
+  color:#fff;
+}
+.header a{
+  position:absolute;
+  top:40%;
+  left:5%;
+}
+.header a:before{
+  content:"";
+  position: absolute;
+  top:0;
+  left:30%;
+  width:8px;
+  height:8px;
+  border: 2px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #fff;
+  transform:rotateZ(-45deg);
+  -webkit-transform:rotateZ(-45deg);
+}
+.content .head{
+  padding:5% 0 10%;
+  background:url("../images/middle_bg.jpg") no-repeat;
+  background-size:100% auto;
+  text-align:center;
+}
+.content .head p{
+  font:.65rem/2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#fff;
+}
+.content .head h2{
+  font:bold 2.5rem/1.5 Arial,"Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#fff;
+}
+.content .head a{
+  padding:.3rem 1rem;
+  font:.65rem/2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#de0650;
+  background-color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  box-shadow:1px 2px 5px rgba(0,0,0,.5);
+}
+.content .middle{
+  padding:.3rem 0;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  background-color:#fff;
+}
+.content .middle .l{
+  border-right:1px solid #ccc;
+}
+.content .middle>a{
+  position:relative;
+  flex:1;
+  text-align:center;
+  padding:.5rem 0;
+  text-decoration:none;
+}
+.content .middle>a:before{
+  position:absolute;
+  right:.5rem;
+  bottom:0;
+  content:"";
+  width:0;
+  height:0;
+  border:solid 4px;
+  border-color: transparent #999 #999 transparent;
+}
+.content .middle img{
+  width:25px;
+  height:auto;
+  font-size:0;
+  margin-bottom:.3rem;
+}
+.content .middle h3{
+  font:.7rem/1.4 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+}
+.content .middle p{
+  font:.55rem/1.2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#b2b2b2;
+}
+.foot{
+  position:absolute;
+  left:0;
+  bottom:.5rem;
+  width:100%;
+}
+.foot a{
+  display:block;
+  font:.7rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  text-align:center;
+  text-decoration: underline;
+  color:#999;
+}
+.mask{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:1;
+  display:none;
+  background-color:#000;
+  opacity:.3;
+}
+.explainMask{
+  position:fixed;
+  top:50%;
+  left:50%;
+  z-index:2;
+  display:none;
+  padding:5%;
+  width:70%;
+  background-color:#fff;
+  border-radius:5px;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+}
+.explainMask h3{
+  font:.75rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#da004b;
+  text-align:center;
+  margin-bottom:.5rem
+}
+.explainMask p{
+  font:.65rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#999;
+}
+.explainMask button{
+  border:none;
+  outline:none;
+  background-color:#da004b;
+  margin-top:1rem;
+  width:100%;
+  font:.65rem/1.8rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#fff;
+  border-radius:5px;
+}
+/*按行程开票*/
+.receiptList{
+  padding-bottom:3.5rem;
+}
+.receiptList .item{
+  border-bottom:1px solid #ddd;
+}
+.receiptList .active {
+   border-bottom:none;
+}
+.receiptList .item:last-child{
+  border-bottom:none;
+}
+.itemHear{
+  padding:5%;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  background-color:#fff;
+}
+.itemHear p{
+  font:.7rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#333;
+  flex:1;
+}
+.itemHear i{
+  position:relative;
+  display:block;
+  width:1rem;
+  height:1rem;
+  border-radius:100%;
+  border:1px solid #ccc;
+  -webkit-transition:all .5s;
+  transition:all .5s;
+}
+.itemHear i:before{
+  content:"";
+  position: absolute;
+  top:0;
+  left:30%;
+  width:6px;
+  height:6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #ccc;
+  transform:rotateZ(-135deg) translate(-50%,-50%);
+  -webkit-transform:rotateZ(-135deg)translate(-50%,-50%);
+}
+.active .itemHear i{
+  -webkit-transition:all .5s;
+  transition:all .5s;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.developItem{
+  padding:5%;
+  display:none;
+}
+.receiptList .active .developItem{
+  display:block;
+}
+.developContent{
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  margin-bottom:.5rem;
+}
+.developContent:last-chlid{
+  margin-bottom:0;
+}
+.developContent i{
+  display:block;
+  width:1rem;
+  height:1rem;
+  border-radius:100%;
+  border:1px solid #ccc;
+  margin-right:.5rem;
+}
+.developContentActive i{
+  background-color:#da004b;
+  border:1px solid #da004b;
+  position:relative;
+}
+.developContentActive i:before{
+ content:"";
+  position: absolute;
+  top:10%;
+  left:35%;
+  width:6px;
+  height:10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #fff;
+  transform:rotateZ(-135deg);
+  -webkit-transform:rotateZ(-135deg);
+}
+.developText{
+  flex: 1;
+  padding:5%;
+  background-color:#fff;
+  border-radius:5px;
+  box-shadow:-1px 0 3px rgba(0,0,0,.05),1px 0 3px rgba(0,0,0,.05),0 -1px 3px rgba(0,0,0,.05),0 1px 3px rgba(0,0,0,.05);
+}
+.developText p{
+  font:.7rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+}
+.developText p:first-child{
+  color:#aaa;
+  margin-bottom:.3rem;
+}
+.developText p:first-child span{
+  padding:.1rem .5rem;
+  background-color:#f90;
+  border-radius:30px;
+  color:#fff;
+  font-size:.55rem;
+  margin-left:.5rem;
+}
+.developText p:last-child{
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.developText p:last-child span:first-child{
+  flex:1;
+}
+.developText p:last-child span:last-child{
+  color:#da004b;
+  font-size:.55rem;
+}
+.developText p:last-child span:last-child strong{
+  font:1rem/1.5 Arial;
+}
+.receiptList .footer{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:0 5%;
+  height:3rem;
+  background-color:#fff;
+  box-shadow:-1px 0 5px rgba(0,0,0,.2);
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.receiptList .footer i{
+  display:block;
+  width:1rem;
+  height:1rem;
+  border-radius:100%;
+  border:1px solid #ccc;
+  margin-right:.3rem;
+}
+.receiptList .footer .active{
+  background-color:#da004b;
+  border:1px solid #da004b;
+  position:relative;
+}
+.receiptList .footer .active2{
+  border:1px solid #ccc;
+}
+.receiptList .footer .active:before{
+  content:"";
+  position: absolute;
+  top:10%;
+  left:35%;
+  width:6px;
+  height:10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #fff;
+  transform:rotateZ(-135deg);
+  -webkit-transform:rotateZ(-135deg);
+}
+.receiptList .footer a{
+  padding:.3rem .5rem;
+  /*background-color:#da004b;*/
+  background-color:#d1d1d1;
+  border-radius:5px;
+  font:.7rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#fff;
+  text-decoration:none;
+}
+.receiptList .footer span{
+  font:.7rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+  margin-right:1rem;
+  flex:1;
+}
+.receiptList .footer span:nth-last-child(2){
+  flex:4;
+}
+.receiptList .footer span strong{
+  color:#da004b;
+}
+/*receipt_select*/
+.receiptSelect{
+  padding-bottom:4rem;
+}
+.receiptSelect .content h4{
+  padding:0 5%;
+  font:.6rem/3 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+}
+.receiptSelect .content>ul{
+  padding:5%;
+  background-color:#fff;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.receiptSelect .content>ul li{
+  padding:0 2%;
+  font:.75rem/2rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+  flex:1;
+  border:1px solid #ccc;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  border-radius:3px;
+}
+.receiptSelect .content>ul li:first-child{
+  margin-right:1%;
+}
+.receiptSelect .content>ul li:last-child{
+  margin-left:1%;
+}
+.receiptSelect .content>ul li i{
+  display:block;
+  width:1rem;
+  height:1rem;
+  border-radius:100%;
+  border:1px solid #ccc;
+  margin-right:0;
+}
+.receiptSelect .content>ul li.active{
+   border:1px solid #da004b;
+   color:#da004b;
+}
+.receiptSelect .content>ul li.active i{
+  background-color:#da004b;
+  border:1px solid #da004b;
+  position:relative;
+}
+.receiptSelect .content>ul li.active i:before{
+  content:"";
+  position: absolute;
+  top:10%;
+  left:35%;
+  width:6px;
+  height:10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #fff;
+  transform:rotateZ(-135deg);
+  -webkit-transform:rotateZ(-135deg);
+}
+.receiptSelect .content>ul li span{
+  flex:1;
+}
+.selectInfo .infoList{
+  display:none;
+}
+.infoList ul{
+  background-color:#fff;
+}
+.infoList ul li .top{
+  padding:5%;
+  border-bottom:1px solid #eee;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.infoList ul li .top i{
+  display:block;
+  width:1rem;
+  height:1rem;
+  border-radius:100%;
+  border:1px solid #ccc;
+  margin-right:.5rem;
+}
+.infoList ul li.on .top i{
+  background-color:#da004b;
+  border:1px solid #da004b;
+  position:relative;
+}
+.infoList ul li.on .top i:after{
+  content:"";
+  position: absolute;
+  top:10%;
+  left:35%;
+  width:6px;
+  height:10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #fff;
+  transform:rotateZ(-135deg);
+  -webkit-transform:rotateZ(-135deg);
+}
+.infoList ul li .top p{
+  flex: 1;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.infoList ul li .top p span{
+  font:.75rem/1 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+}
+.infoList ul li .top p .acquiescent{
+  padding:.05rem .3rem;
+  font-size:.6rem;
+  border:1px solid #eee;
+  color:#ccc;
+  margin-left:.2rem;
+  border-radius:3px;
+}
+.infoList ul li .top p span:last-child{
+  padding:.05rem .3rem;
+  font-size:.55rem;
+  border:1px solid #da004b;
+  color:#da004b;
+  margin-left:.2rem;
+  border-radius:3px;
+}
+.infoList ul li .top a{
+  width:1rem;
+  height:1rem;
+  font-size:0;
+}
+.infoList ul li .top a img{
+  width:100%;
+}
+.infoList ul li.active .top i{
+  background-color:#da004b;
+  border:1px solid #da004b;
+  position:relative;
+}
+.infoList ul li.active .top i:before{
+  content:"";
+  position: absolute;
+  top:10%;
+  left:35%;
+  width:6px;
+  height:10px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #fff;
+  transform:rotateZ(-135deg);
+  -webkit-transform:rotateZ(-135deg);
+}
+.specialText{
+  padding:3%;
+  margin:5% 8%;
+  background-color:#eee;
+  border-radius:10px;
+}
+.specialText p{
+  font:.55rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#aaa;
+}
+.newAdd{
+  padding:3% 5%;
+  background-color:#fff;
+}
+.newAdd a{
+  text-decoration:none;
+  display:block;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.newAdd i{
+  position:relative;
+  width:1rem;
+  height:1rem;
+  border:1px solid #da004b;
+  border-radius:100%;
+  margin-right:.3rem;
+}
+.newAdd i:before{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  content:"\271A";
+  font-size:.6rem;
+  color:#da004b;
+}
+.newAdd span{
+  font:.75rem/1.2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#da004b;
+}
+.receiptSelect .footer{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#f5f5f5;
+}
+.receiptSelect .footer a{
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  text-decoration:none;
+  font-size:0;
+}
+.receiptSelect .footer a span{
+  font:.6rem/1.2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#999;
+  text-decoration:underline;
+}
+.receiptSelect .footer a i{
+  width:1rem;
+  height:1rem;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.receiptSelect .footer a i:before{
+  content:"\00BB";
+  color:#999;
+  font-size:1rem;
+}
+.receiptSelect .footer button{
+  margin:3% 5%;
+  border:none;
+  outline:none;
+  width: 90%;
+  background-color:#d1d1d1;
+  font:.75rem/2rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#999;
+  color:#fff;
+  border-radius:5px;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/*receiptRevise*/
+.receiptRevise{padding-bottom:2.2rem;}
+.receiptRevise .content h4{
+  padding:0 5%;
+  font:.55rem/3 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#aaa;
+}
+.receiptRevise .content .title{
+  padding:5%;
+  background-color:#fff;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.receiptRevise .content .title span{
+  font:.7rem/1.2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+  flex: 1;
+}
+.receiptRevise .content .title input{
+  color:#333;
+  text-align: right;
+  border:none;
+  background:none;
+  outline:none;
+}
+.receiptRevise .content dl{
+  padding:0 5%;
+  background-color:#fff;
+}
+.receiptRevise .content dl dd{
+  padding:5% 0;
+  border-bottom:1px solid #ddd;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.receiptRevise .content dl dd:last-child{
+  border-bottom:0;
+}
+.receiptRevise .content dl dd span{
+  font:.7rem/1.2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+}
+.receiptRevise .content dl dd span:last-child{
+  color:#da004b;
+  flex: 1;
+  text-align: right;
+}
+.tacitlyFoot{
+  padding:5%;
+  background-color:#fff;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.tacitlyFoot span{
+  font:.7rem/1.2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+  flex:1;
+}
+.tacitlyFoot .checkbox {
+  position: relative;
+  display: inline-block;
+  height:1.5rem;
+  width: 3rem;
+}
+.tacitlyFoot .checkbox:after, tacitlyFoot .checkbox:before {
+  font-family: FontAwesome;
+  -webkit-font-feature-settings: normal;
+     -moz-font-feature-settings: normal;
+          font-feature-settings: normal;
+  -webkit-font-kerning: auto;
+     -moz-font-kerning: auto;
+          font-kerning: auto;
+  -webkit-font-language-override: normal;
+     -moz-font-language-override: normal;
+          font-language-override: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-weight: normal;
+  text-rendering: auto;
+}
+.tacitlyFoot .checkbox label {
+  width: 3rem;
+  height: 1.5rem;
+  background: #ccc;
+  position: relative;
+  display: inline-block;
+  border-radius: 46px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.tacitlyFoot .checkbox label:after {
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height:1.3rem;
+  border-radius: 100%;
+  left: .1rem;
+  top: .1rem;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.tacitlyFoot .checkbox input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+.tacitlyFoot .checkbox input:hover + label:after {
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.tacitlyFoot .checkbox input:checked + label:after {
+  left:1.6rem;
+}
+.tacitlyFoot .checkbox input:checked + label {
+  background: #fc0260;
+}
+.receiptRevise .footer{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  height:2rem;
+  background-color:#fff;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.receiptRevise .footer a{
+  flex:1;
+  text-decoration:none;
+  font:.7rem/2rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#999;
+  text-align:center;
+}
+.receiptRevise .footer a:last-child{
+  background-color:#da004b;
+  color:#fff;
+}
+.deleteMask{
+  position:fixed;
+  top:50%;
+  left:50%;
+  z-index:2;
+  display:none;
+  width:70%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  border-radius:5px;
+  background-color:#fff;
+}
+.deleteMask .daleteText{
+  padding:15% 10%;
+}
+.deleteMask .daleteText p{
+  font:.7rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#999;
+  text-align:center;
+}
+.deleteMask .daleteBtn{
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  height:2rem;
+  border-top:1px solid #ddd;
+}
+.deleteMask .daleteBtn a{
+  flex:1;
+  font:.7rem/2rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#999;
+  text-align:center;
+  text-decoration:none;
+}
+.deleteMask .daleteBtn a:last-child{
+  color:#da004b;
+  border-left:1px solid #ddd;
+}
+/*receiptOnlyRevise*/
+.receiptOnlyRevise{
+  padding-bottom: 0;
+}
+.receiptOnlyRevise .content .title{
+  padding:0 5%;
+  display:block;
+}
+.receiptOnlyRevise .item{
+  padding:5% 0;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  border-bottom:1px solid #ddd;
+}
+.receiptOnlyRevise .item:last-child{
+  border-bottom:0;
+}
+.receiptOnlyRevise .footer{
+  margin:5%;
+  position:inherit;
+}
+.receiptOnlyRevise .footer a{
+  border-radius:5px;
+}
+/*receiptSubmit*/
+.receiptSubmit .top{
+  padding:8% 0;
+  text-align:center;
+}
+.receiptSubmit .top i{
+  width:2rem;
+  height:2rem;
+  display:block;
+  margin:0 auto;
+  border-radius:100%;
+  background-color:#da004b;
+  position:relative;
+}
+.receiptSubmit .top i:before{
+  content:"";
+  position: absolute;
+  top:25%;
+  left:40%;
+  width:8px;
+  height:16px;
+  border: 2px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #fff;
+  transform:rotateZ(-135deg);
+  -webkit-transform:rotateZ(-135deg);
+}
+.receiptSubmit .top p{
+  font:1rem/2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#da004b;
+}
+.submitMiddle .title{
+  padding:0 5%;
+  background-color:#fff;
+}
+.submitMiddle .title .text{
+  position:relative;
+  padding:5% 0;
+  border-bottom:1px solid #ddd;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center; 
+}
+.submitMiddle .title .text:before{
+  content:"";
+  position: absolute;
+  top:50%;
+  right:5px;
+  width:10px;
+  height:10px;
+  border: 2px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #e1e1e1;
+  transform:rotateZ(135deg) translate(-50%,0);
+  -webkit-transform:rotateZ(135deg) translate(-50%,0);
+}
+.submitMiddle .title .text span{
+  font:.7rem/1.2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+}
+.submitMiddle .title .text span:last-child{
+  padding:0 .3rem;
+  margin-left:.5rem;
+  font-size:.55rem;
+  color:#fff;
+  background-color:#f90;
+  border-radius:30px;
+}
+.submitMiddle>.text{
+  padding:5%;
+  background-color:#fff;
+}
+.submitMiddle>.text p{
+  font:.7rem/2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#aaa;
+}
+.submitMiddle>.text p span{
+  color:#666;
+}
+.submitMiddle .orderList{
+  margin-top:.5rem;
+  background-color:#fff;
+}
+.submitMiddle .orderList .listTop{
+  padding:5%;
+  border-bottom:1px solid #ddd;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.submitMiddle .orderList .listTop span{
+  font:.7rem/2 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+  flex:1;
+}
+.submitMiddle .orderList .listTop i{
+  position:relative;
+  display:block;
+  width:1rem;
+  height:1rem;
+  border-radius:100%;
+  border:1px solid #ccc;
+  -webkit-transition:all .5s;
+  transition:all .5s;
+}
+.submitMiddle .orderList .listTop i:before{
+  content:"";
+  position: absolute;
+  top:0;
+  left:30%;
+  width:6px;
+  height:6px;
+  border: 1px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #ccc;
+  transform:rotateZ(-135deg) translate(-50%,-50%);
+  -webkit-transform:rotateZ(-135deg)translate(-50%,-50%);
+}
+.submitMiddle .orderList .listTop.active i{
+  -webkit-transition:all .5s;
+  transition:all .5s;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.submitMiddle .orderList .itemAll{
+  padding:0 5%;
+  background-color:#fff;
+  display:none;
+}
+.submitMiddle .orderList .itemAll .item{
+  padding:5% 0;
+  border-bottom:1px solid #ddd;
+}
+.submitMiddle .orderList .itemAll .item:last-child{
+  border-bottom:0;
+}
+.submitMiddle .orderList .itemAll .item p{
+  font:.7rem/1.5 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#666;
+}
+.submitMiddle .orderList .itemAll .item p:first-child{
+  color:#f90;
+  line-height:2;
+}
+.submitMiddle .orderList .itemAll .item p:last-child{
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+}
+.submitMiddle .orderList .itemAll .item p:last-child span{
+  flex:1;
+}
+.submitMiddle .orderList .itemAll .item p:last-child span:last-child{
+  color:#da004b;
+  text-align:right;
+}
+.submitMiddle .orderList .itemAll .item p:last-child span:last-child strong{
+  font-weight:bold;
+  font-size:.9rem;
+}
+.submitFoot{
+  padding:5%;
+}
+.submitFoot p{
+  font:.7rem/1.8 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#ccc;
+}
+.detailedMask{
+  position:fixed;
+  top:50%;
+  left:50%;
+  z-index:2;
+  display:none;
+  width:80%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+.detailedMaskText{
+  padding:5%;
+  border-radius:5px;
+  background-color:#fff;
+}
+.detailedMaskText p{
+  display:-webkit-flex;
+  display:flex;
+}
+.detailedMaskText p span{
+  font:.7rem/1.8 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.detailedMaskText p span:first-child{
+  color:#aaa;
+  flex:1;
+}
+.detailedMaskText p span:last-child{
+  color:#666;
+  flex:2;
+}
+.detailedMask .close{
+  margin-top:10%;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.detailedMask .close i{
+  width:2rem;
+  height:2rem;
+  border:1px solid #fff;
+  border-radius:100%;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.detailedMask .close i:before{
+  content: "\2715";
+  color: #fff; 
+}
+/*receiptHistory*/
+.receiptHistory .item{
+  position:relative;
+  margin:5%;
+  padding:5%;
+  display:block;
+  background-color:#fff;
+  text-decoration:none;
+}
+.receiptHistory .item p{
+  font:.7rem/1.8 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#aaa;
+}
+.receiptHistory .item p span{
+  color:#666;
+  margin-left:.3rem;
+}
+.receiptHistory .item p span em{
+  padding:0 .3rem;
+  background-color:#f90;
+  color:#fff;
+  border-radius:30px;
+  font-size:.5rem;
+}
+.receiptHistory .item p span .already{
+  background-color:#22ac38;
+}
+.receiptHistory .item:before{
+  content:"";
+  position: absolute;
+  top:50%;
+  right:7%;
+  width:10px;
+  height:10px;
+  border: 2px solid;
+  border-bottom: 0;
+  border-right: 0;
+  color: #e1e1e1;
+  transform:rotateZ(135deg) translate(-50%,0);
+  -webkit-transform:rotateZ(135deg) translate(-50%,0);
+}
+.notHistory{
+  padding-top:30%;
+  text-align:center;
+}
+.notHistory .img{
+  margin:0 auto;
+  padding:5%;
+  width:4rem;
+  height:4rem;
+  background-color:#d1d1d1;
+  border-radius:100%;
+  display:-webkit-flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.notHistory .img img{
+ width:100%;
+}
+.notHistory p{
+  font:.7rem/3 "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#999;
+}
+/*receiptPending*/
+.receiptPending .footer{
+  padding:5%;
+}
+.receiptPending .footer button{
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #da004b;
+  font: .75rem/2rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #999;
+  color: #fff;
+  border-radius: 5px;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*receiptalready*/
+.receiptalready .title .text span:last-child{
+  background-color:#22ac38;
+}
+
+
+.reviseSuccess{
+  position:absolute;
+  left:50%;
+  bottom:5%;
+  width:25%;
+  height:1.5rem;
+  background-color:#7d7d7d;
+  transform: translate(-50%,0);
+  border-radius:30px;
+  transition:all .5s;
+}
+.reviseSuccessActive{
+  bottom:15%;
+}
+.reviseSuccess p{
+  text-align: center;
+  font: .65em/1.5rem "Microsoft YaHei","SimHei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color:#fff;
+}

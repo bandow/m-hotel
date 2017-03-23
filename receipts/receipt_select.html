@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="按行程开票"/>
+<meta name="keywords" content="按行程开票"/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>按行程开票</title>
+<link rel="stylesheet" href="styles/receipt.css">
+</head>
+<body style="background-color:#f5f5f5;">
+	<div class="wrapper receiptSelect">
+		<header class="header"><a href="javascript:history.go(-1);"></a><h1>按行程开票</h1></header>
+		<div class="content">
+			<h4>请选择发票类型</h4>
+			<ul class="selectHear">
+				<li class="active"><i></i><span>增值税普通发票</span></li>
+				<li><i></i><span>增值税专用发票</span></li>
+			</ul>
+			<h4>发票信息</h4>
+			<div class="selectInfo">
+				<div class="common infoList" style="display:block;">
+					<ul class="commonList">
+						<li>
+							<div class="top">
+								<i></i>
+								<p>
+									<span>哥斯拉玩具有限公司</span>
+									<span class="acquiescent">默认</span>
+									<span>普票</span>
+								</p>
+								<a href="receipt_revise.html">
+									<img src="images/revise_icon.png" alt="">
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="top">
+								<i></i>
+								<p>
+									<span>金枝品牌策划有限公司</span>
+									<span>普票</span>
+								</p>				
+								<a href="receipt_revise.html">
+									<img src="images/revise_icon.png" alt="">
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="special infoList">
+					<ul class="specialList">
+						<li>
+						    <div class="top">
+						    	<i></i>
+								<p>
+									<span>哥斯拉玩具有限公司</span>
+									<span class="acquiescent">默认</span>
+									<span>普票</span>
+								</p>
+								<a href="receipt_only_revise.html">
+									<img src="images/revise_icon.png" alt="">
+								</a>
+						    </div>
+							<div class="specialText">
+								<p>识别号：91450100799710205N</p>
+								<p>开户行名称：南宁市壮锦大道39号B-3栋1401号房</p></p>
+								<p>开户行账号：2102103009300111728</p>
+								<p>注册地址：中国工商银行南宁市新城支行</p>
+								<p>注册电话：0771-2290605</p>
+							</div>
+						</li>
+						<li>
+							<div class="top">
+								<i></i>
+								<p>
+									<span>金枝品牌策划有限公司</span>
+									<span>普票</span>
+								</p>				
+								<a href="receipt_only_revise.html">
+									<img src="images/revise_icon.png" alt="">
+								</a>
+							</div>
+							<div class="specialText">
+								<p>识别号：91450100799710205N</p>
+								<p>开户行名称：南宁市壮锦大道39号B-3栋1401号房</p></p>
+								<p>开户行账号：2102103009300111728</p>
+								<p>注册地址：中国工商银行南宁市新城支行</p>
+								<p>注册电话：0771-2290605</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="newAdd">
+				<a href=""><i></i><span>新增发票抬头</span></a>
+			</div>
+		</div>
+		<footer class="footer">
+			<a href="javscript:;"><span>开票说明</span><i></i></a>
+			<button>确认信息，下一步</button>
+		</footer>
+	</div>
+	<!-- script begin -->
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){			
+			$(".selectHear li").on("click",function(){
+				$(this).addClass("active").siblings().removeClass("active");
+				$(".selectInfo .infoList").eq($(this).index()).show().siblings().hide();
+				$(".footer button").css("backgroundColor","#d1d1d1").removeAttr("onclick");
+				$(".commonList li").removeClass("on");
+				$(".specialList li").removeClass("on");
+			});
+			$(".commonList li i").on("click",function(){
+				$(this).parent().parent().addClass("on").siblings().removeClass("on");
+				$(".footer button").css("backgroundColor","#da004b").attr("onclick","nextPage()");
+			});
+			$(".specialList li i").on("click",function(){
+				$(this).parent().parent().addClass("on").siblings().removeClass("on");
+				$(".footer button").css("backgroundColor","#da004b").attr("onclick","nextPage()");
+			});
+		});
+		function nextPage(){
+			window.location.href = "receipt_submit.html";
+		}
+	</script>
+	<!-- script end -->
+</body>
+</html>

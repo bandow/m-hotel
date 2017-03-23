@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html id="html" lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="查看发票历史"/>
+<meta name="keywords" content="查看发票历史"/>
+<meta name="author" content="name, sycbbb@sina.com"/>
+<meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no, email=no,adress=no"/>
+<meta name="msapplication-tap-highlight" content="no">
+<title>查看发票历史</title>
+<link rel="stylesheet" href="styles/receipt.css">
+</head>
+<body style="background-color:#f5f5f5;">
+	<div class="wrapper receiptHistory">
+		<header class="header"><a href="javascript:history.go(-1);"></a><h1>查看发票历史</h1></header>
+		<div class="content">
+			<a href="receipt_pending.html" class="item">
+				<p>发票单号：<span>F0020170301001<em>待开票</em></span></p>
+				<p>入住门店：<span>城市便捷酒店（广州白云山）</span></p>
+				<p>专用发票：<span>广西东呈酒店管理有限公司</span></p>
+				<p>发票金额：<span>￥193.00</span></p>
+			</a>
+			<a href="receipt_already.html" class="item">
+				<p>发票单号：<span>F0020170301001<em class="already">已开票</em></span></p>
+				<p>入住门店：<span>城市便捷酒店（广州白云山）</span></p>
+				<p>专用发票：<span>广西东呈酒店管理有限公司</span></p>
+				<p>发票金额：<span>￥193.00</span></p>
+			</a>
+			<!-- 暂无开票记录 begin-->
+			<!-- <div class="notHistory">
+				<div class="img"><img src="images/not_history_icon.png" alt=""></div> 
+				<p>暂无开票记录</p>
+			</div> -->
+			<!-- 暂无开票记录 end-->
+		</div>
+	</div>
+	<!-- script begin -->
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".listTop").on("click",function(){
+				$(this).toggleClass("active").next().toggle();
+			});
+			$(".submitMiddle .title").on("click",function(){
+				$(".mask").show();
+				$(".detailedMask").show();
+			});		
+		});
+		function mask(){
+			$(".mask").hide();
+			$(".detailedMask").hide();
+		}
+	</script>
+	<!-- script end -->
+</body>
+</html>
